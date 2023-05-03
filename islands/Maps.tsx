@@ -3,7 +3,7 @@ import { useEffect, useState } from "preact/hooks";
 export type LocationData = {
   latitude: number;
   longitude: number;
-  
+  link: string;
 };
 
 function Maps() {
@@ -13,6 +13,7 @@ function Maps() {
     const data: LocationData = {
       latitude: position.coords.latitude,
       longitude: position.coords.longitude,
+      link: `https://www.google.com/maps?q=${position.coords.latitude},${position.coords.longitude}`
     };
     console.log(data);
     setLocationData(data);
@@ -30,16 +31,17 @@ function Maps() {
 
   return (
     <div>
-      {locationData ? (
-        <p>
-          Latitude: {locationData.latitude} <br />
-          Longitude: {locationData.longitude}
-        </p>
-      ) : (
-        <>
-          <button onClick={handleButtonClick}>Obter localização</button>
-        </>
-      )}
+      {locationData
+        ? (
+          <div>
+            <a href={locationData.link} target="_blank">{locationData.link}</a>
+          </div>                 
+        )
+        : (
+          <>
+            <button onClick={handleButtonClick}>Obter localização</button>
+          </>
+        )}
     </div>
   );
 }
