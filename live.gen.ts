@@ -6,8 +6,18 @@ import config from "./deno.json" assert { type: "json" };
 import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$0 from "./routes/_app.tsx";
-import * as $$$$$$$$0 from "./sections/Head.tsx";
-import * as $$$$$$$$1 from "./sections/GetStarted.tsx";
+import * as $$$$$0 from "./islands/CountDays.tsx";
+import * as $$$$$1 from "./islands/CountR.tsx";
+import * as $$$$$2 from "./islands/HeaderResponsive.tsx";
+import * as $$$$$3 from "./islands/Maps.tsx";
+import * as $$$$$4 from "./islands/Programacao.tsx";
+import * as $$$$$$$$0 from "./sections/CountDown.tsx";
+import * as $$$$$$$$1 from "./sections/CountRegressive.tsx";
+import * as $$$$$$$$2 from "./sections/Festas.tsx";
+import * as $$$$$$$$3 from "./sections/Head.tsx";
+import * as $$$$$$$$4 from "./sections/Header.tsx";
+import * as $$$$$$$$5 from "./sections/Home.tsx";
+import * as $$$$$$$$6 from "./sections/ShareLocal.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -50,12 +60,24 @@ const manifest = {
     "./routes/live/previews/[...block].tsx": $live_previews,
     "./routes/live/workbench.ts": $live_workbench,
   },
+  "islands": {
+    "./islands/CountDays.tsx": $$$$$0,
+    "./islands/CountR.tsx": $$$$$1,
+    "./islands/HeaderResponsive.tsx": $$$$$2,
+    "./islands/Maps.tsx": $$$$$3,
+    "./islands/Programacao.tsx": $$$$$4,
+  },
   "sections": {
     "$live/sections/PageInclude.tsx": i1$$$0,
     "$live/sections/Slot.tsx": i1$$$1,
     "$live/sections/UseSlot.tsx": i1$$$2,
-    "deco-sites/pphoje/sections/GetStarted.tsx": $$$$$$$$1,
-    "deco-sites/pphoje/sections/Head.tsx": $$$$$$$$0,
+    "deco-sites/pphoje/sections/CountDown.tsx": $$$$$$$$0,
+    "deco-sites/pphoje/sections/CountRegressive.tsx": $$$$$$$$1,
+    "deco-sites/pphoje/sections/Festas.tsx": $$$$$$$$2,
+    "deco-sites/pphoje/sections/Head.tsx": $$$$$$$$3,
+    "deco-sites/pphoje/sections/Header.tsx": $$$$$$$$4,
+    "deco-sites/pphoje/sections/Home.tsx": $$$$$$$$5,
+    "deco-sites/pphoje/sections/ShareLocal.tsx": $$$$$$$$6,
   },
   "handlers": {
     "$live/handlers/devPage.ts": i1$0,
@@ -79,7 +101,6 @@ const manifest = {
     "$live/flags/audience.ts": i1$$$$$0,
     "$live/flags/everyone.ts": i1$$$$$1,
   },
-  "islands": {},
   "config": config,
   "baseUrl": import.meta.url,
 };
