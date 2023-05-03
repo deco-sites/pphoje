@@ -13,7 +13,8 @@ function Maps() {
     const data: LocationData = {
       latitude: position.coords.latitude,
       longitude: position.coords.longitude,
-      link: `https://www.google.com/maps?q=${position.coords.latitude},${position.coords.longitude}`
+      link:
+        `https://www.google.com/maps?q=${position.coords.latitude},${position.coords.longitude}`,
     };
     console.log(data);
     setLocationData(data);
@@ -29,18 +30,25 @@ function Maps() {
     });
   };
 
+  function copyToClipboard() {
+    if(locationData?.link){
+      navigator.clipboard.writeText(locationData.link);
+    }
+  }
+
   return (
-    <div>
+    <div class="text-center px-2 py-2 flex flex-col gap-4">
       {locationData
         ? (
           <div>
             <a href={locationData.link} target="_blank">{locationData.link}</a>
-          </div>                 
+            <button onClick={copyToClipboard}>Copiar</button>
+          </div>
         )
         : (
-          <>
-            <button onClick={handleButtonClick}>Obter localização</button>
-          </>
+          <div>
+            <button onClick={handleButtonClick} class="cursor-pointer px-2 py-2 bg-blue-600">Obter localização</button>
+          </div>
         )}
     </div>
   );
