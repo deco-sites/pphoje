@@ -1,11 +1,11 @@
-import Programacao from "../islands/Programacao.tsx"
+import Programacao from "../islands/Programacao.tsx";
 
 function Festas() {
   return (
     <div>
-        <Programacao/>
+      <Programacao />
     </div>
-  )
+  );
 }
 
-export default Festas
+export default Festas;

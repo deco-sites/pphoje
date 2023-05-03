@@ -1,9 +1,7 @@
-import CountDays from "../islands/CountDays.tsx"
+import CountDays from "../islands/CountDays.tsx";
 
 function CountDown() {
-  return (
-    <CountDays/>
-  )
+  return <CountDays />;
 }
 
-export default CountDown
+export default CountDown;

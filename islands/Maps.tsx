@@ -1,43 +1,47 @@
-import { useState, useEffect } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 
-export type Location = {
-    latitude: number;
-    longitude: number;
+export type LocationData = {
+  latitude: number;
+  longitude: number;
+  
 };
 
 function Maps() {
-   const [locationLink, setLocationLink] = useState('');
-    const showPosition = async (position: GeolocationPosition) => {
-    const latitude = position.coords.latitude;
-    const longitude = position.coords.longitude;
-    const response = await fetch(`https://www.google.com/maps?q=${latitude},${longitude}&output=embed`);
-    const text = await response.text();
-    setLocationLink(`https://www.google.com/maps?q=${latitude},${longitude}`);
-  }
+  const [locationData, setLocationData] = useState<LocationData | null>(null);
 
-  const getLocation = () => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition, error => {
-        console.log(error);
-      });
-    } else {
-      console.log("erro");
-    }
-  }
+  const getPosition = (position: GeolocationPosition) => {
+    const data: LocationData = {
+      latitude: position.coords.latitude,
+      longitude: position.coords.longitude,
+    };
+    console.log(data);
+    setLocationData(data);
+  };
+
+  const geoError = (error: GeolocationPositionError) => {
+    console.log(error);
+  };
+
+  const handleButtonClick = () => {
+    navigator.geolocation.getCurrentPosition(getPosition, geoError, {
+      enableHighAccuracy: true,
+    });
+  };
 
   return (
     <div>
-      <button onClick={getLocation}>Compartilhar Localização</button>
-      {locationLink && <p>Localização <a href={locationLink} target="_blank" rel="">{locationLink}</a></p>}
+      {locationData ? (
+        <p>
+          Latitude: {locationData.latitude} <br />
+          Longitude: {locationData.longitude}
+        </p>
+      ) : (
+        <>
+          <button onClick={handleButtonClick}>Obter localização</button>
+        </>
+      )}
     </div>
   );
 }
 
 export default Maps;
-
-
-    
-  
-    
-  
-  

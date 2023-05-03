@@ -1,12 +1,11 @@
-import Maps from "../islands/Maps.tsx"
-
+import Maps from "../islands/Maps.tsx";
 
 function ShareLocal() {
   return (
     <div>
-        <Maps/>
+      <Maps />
     </div>
-  )
+  );
 }
 
-export default ShareLocal
+export default ShareLocal;

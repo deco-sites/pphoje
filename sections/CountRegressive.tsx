@@ -1,10 +1,7 @@
 import CountR from "../islands/CountR.tsx";
 
-
 function CountRegressive() {
-  return (
-    <CountR/>
-  )
+  return <CountR />;
 }
 
-export default CountRegressive
+export default CountRegressive;

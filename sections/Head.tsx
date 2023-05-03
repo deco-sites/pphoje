@@ -22,6 +22,7 @@ export default function HeadComponent({
   return (
     <Head>
       <title>{title}</title>
+      <meta http-equiv="Content-Security-Policy" content="geolocation 'self'"/>
       <meta name="theme-color" content={themeColor}></meta>
       <meta name="description" content={description} />
       <meta property="og:title" content={title} />
