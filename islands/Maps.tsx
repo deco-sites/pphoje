@@ -13,7 +13,8 @@ function Maps() {
     const data: LocationData = {
       latitude: position.coords.latitude,
       longitude: position.coords.longitude,
-      link: `https://www.google.com/maps?q=${position.coords.latitude},${position.coords.longitude}`
+      link:
+        `https://www.google.com/maps?q=${position.coords.latitude},${position.coords.longitude}`,
     };
     console.log(data);
     setLocationData(data);
@@ -35,7 +36,7 @@ function Maps() {
         ? (
           <div>
             <a href={locationData.link} target="_blank">{locationData.link}</a>
-          </div>                 
+          </div>
         )
         : (
           <>
