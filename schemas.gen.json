@@ -9,7 +9,44 @@
       "additionalProperties": false,
       "properties": {
         "__resolveType": {
-          "type": "string"
+          "type": "string",
+          "not": {
+            "enum": [
+              "deco-sites/pphoje/functions/LoadGitHubRaw.ts",
+              "./islands/CountDays.tsx",
+              "./islands/CountR.tsx",
+              "./islands/HeaderButton.tsx",
+              "./islands/HeaderResponsive.tsx",
+              "./islands/Maps.tsx",
+              "./islands/Programacao.tsx",
+              "$live/handlers/devPage.ts",
+              "$live/handlers/fresh.ts",
+              "$live/handlers/proxy.ts",
+              "$live/handlers/router.ts",
+              "$live/handlers/routesSelection.ts",
+              "$live/pages/LivePage.tsx",
+              "$live/sections/PageInclude.tsx",
+              "$live/sections/Slot.tsx",
+              "$live/sections/UseSlot.tsx",
+              "deco-sites/pphoje/sections/CountDown.tsx",
+              "deco-sites/pphoje/sections/CountRegressive.tsx",
+              "deco-sites/pphoje/sections/Festas.tsx",
+              "deco-sites/pphoje/sections/Head.tsx",
+              "deco-sites/pphoje/sections/Header.tsx",
+              "deco-sites/pphoje/sections/Home.tsx",
+              "deco-sites/pphoje/sections/ShareLocal.tsx",
+              "$live/matchers/MatchAlways.ts",
+              "$live/matchers/MatchDate.ts",
+              "$live/matchers/MatchEnvironment.ts",
+              "$live/matchers/MatchMulti.ts",
+              "$live/matchers/MatchOrigin.ts",
+              "$live/matchers/MatchRandom.ts",
+              "$live/matchers/MatchSite.ts",
+              "$live/matchers/MatchUserAgent.ts",
+              "$live/flags/audience.ts",
+              "$live/flags/everyone.ts"
+            ]
+          }
         }
       }
     },
@@ -106,6 +143,28 @@
         "page"
       ],
       "title": "deco-cx/live/handlers/fresh.ts@FreshConfig"
+    },
+    "ZGVjby1jeC9saXZlL2hhbmRsZXJzL3Byb3h5LnRz@Props": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "the proxy url.",
+          "title": "Url"
+        },
+        "basePath": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "the base path of the url.",
+          "title": "Base Path"
+        }
+      },
+      "required": [
+        "url"
+      ],
+      "title": "deco-cx/live/handlers/proxy.ts@Props"
     },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler": {
       "$ref": "#/root/handlers",
@@ -483,6 +542,27 @@
       ],
       "title": "deco-cx/live/matchers/MatchMulti.ts@Props"
     },
+    "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoT3JpZ2luLnRz@Props": {
+      "type": "object",
+      "properties": {
+        "includes": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Includes"
+        },
+        "match": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Match"
+        }
+      },
+      "required": [],
+      "title": "deco-cx/live/matchers/MatchOrigin.ts@Props"
+    },
     "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoUmFuZG9tLnRz@Props": {
       "type": "object",
       "properties": {
@@ -579,7 +659,8 @@
       "title": "deco-cx/live/flags/everyone.ts@EveryoneConfig"
     },
     "ZGVjby1zaXRlcy9wcGhvamUvZnVuY3Rpb25zL0xvYWRHaXRIdWJSYXcudHM=": {
-      "title": "deco-sites/pphoje/functions/LoadGitHubRaw.ts",
+      "title": "GitHub Raw Loader",
+      "description": "Grabs data from a GitHub repo",
       "type": "object",
       "allOf": [
         {
@@ -628,6 +709,22 @@
             "./islands/CountR.tsx"
           ],
           "default": "./islands/CountR.tsx"
+        }
+      }
+    },
+    "Li9pc2xhbmRzL0hlYWRlckJ1dHRvbi50c3g=": {
+      "title": "./islands/HeaderButton.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/HeaderButton.tsx"
+          ],
+          "default": "./islands/HeaderButton.tsx"
         }
       }
     },
@@ -723,6 +820,27 @@
             "$live/handlers/fresh.ts"
           ],
           "default": "$live/handlers/fresh.ts"
+        }
+      }
+    },
+    "JGxpdmUvaGFuZGxlcnMvcHJveHkudHM=": {
+      "title": "$live/handlers/proxy.ts",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2hhbmRsZXJzL3Byb3h5LnRz@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "$live/handlers/proxy.ts"
+          ],
+          "default": "$live/handlers/proxy.ts"
         }
       }
     },
@@ -1053,6 +1171,27 @@
         }
       }
     },
+    "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hPcmlnaW4udHM=": {
+      "title": "$live/matchers/MatchOrigin.ts",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoT3JpZ2luLnRz@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "$live/matchers/MatchOrigin.ts"
+          ],
+          "default": "$live/matchers/MatchOrigin.ts"
+        }
+      }
+    },
     "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hSYW5kb20udHM=": {
       "title": "$live/matchers/MatchRandom.ts",
       "type": "object",
@@ -1217,6 +1356,9 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL0NvdW50Ui50c3g="
         },
         {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlckJ1dHRvbi50c3g="
+        },
+        {
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlclJlc3BvbnNpdmUudHN4"
         },
         {
@@ -1238,6 +1380,9 @@
         },
         {
           "$ref": "#/definitions/JGxpdmUvaGFuZGxlcnMvZnJlc2gudHM="
+        },
+        {
+          "$ref": "#/definitions/JGxpdmUvaGFuZGxlcnMvcHJveHkudHM="
         },
         {
           "$ref": "#/definitions/JGxpdmUvaGFuZGxlcnMvcm91dGVyLnRz"
@@ -1313,6 +1458,9 @@
         },
         {
           "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hNdWx0aS50cw=="
+        },
+        {
+          "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hPcmlnaW4udHM="
         },
         {
           "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hSYW5kb20udHM="
