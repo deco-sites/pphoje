@@ -1,23 +1,22 @@
-
-import Modal from "../islands/Modal.tsx"
+import Modal from "../islands/Modal.tsx";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 
-export interface Artist{
-    desktop?: LiveImage;
-    mobile?: LiveImage;
-    name: string;
-    bio: string;
-    links?: string[];
+export interface Artist {
+  desktop?: LiveImage;
+  mobile?: LiveImage;
+  name: string;
+  bio: string;
+  links?: string[];
 }
-export interface LineUpProps{
-    performers: Artist[];
+export interface LineUpProps {
+  performers: Artist[];
 }
-function lineUp({performers}: LineUpProps) {
+function lineUp({ performers }: LineUpProps) {
   return (
     <div>
-        <Modal performers={performers}/>
+      <Modal performers={performers} />
     </div>
-  )
+  );
 }
 
-export default lineUp
+export default lineUp;

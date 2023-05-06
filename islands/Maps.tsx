@@ -31,7 +31,7 @@ function Maps() {
   };
 
   function copyToClipboard() {
-    if(locationData?.link){
+    if (locationData?.link) {
       navigator.clipboard.writeText(locationData.link);
     }
   }
@@ -47,7 +47,12 @@ function Maps() {
         )
         : (
           <div>
-            <button onClick={handleButtonClick} class="cursor-pointer px-2 py-2 bg-blue-600">Obter localização</button>
+            <button
+              onClick={handleButtonClick}
+              class="cursor-pointer px-2 py-2 bg-blue-600"
+            >
+              Obter localização
+            </button>
           </div>
         )}
     </div>
