@@ -8,9 +8,10 @@ import * as $0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$0 from "./routes/_app.tsx";
 import * as $$$$$0 from "./islands/Programacao.tsx";
 import * as $$$$$1 from "./islands/HeaderResponsive.tsx";
-import * as $$$$$2 from "./islands/CountDays.tsx";
-import * as $$$$$3 from "./islands/CountR.tsx";
-import * as $$$$$4 from "./islands/Maps.tsx";
+import * as $$$$$2 from "./islands/HeaderButton.tsx";
+import * as $$$$$3 from "./islands/CountDays.tsx";
+import * as $$$$$4 from "./islands/CountR.tsx";
+import * as $$$$$5 from "./islands/Maps.tsx";
 import * as $$$$$$$$0 from "./sections/CountRegressive.tsx";
 import * as $$$$$$$$1 from "./sections/Festas.tsx";
 import * as $$$$$$$$2 from "./sections/Home.tsx";
@@ -63,10 +64,11 @@ const manifest = {
     "./routes/live/workbench.ts": $live_workbench,
   },
   "islands": {
-    "./islands/CountDays.tsx": $$$$$2,
-    "./islands/CountR.tsx": $$$$$3,
+    "./islands/CountDays.tsx": $$$$$3,
+    "./islands/CountR.tsx": $$$$$4,
+    "./islands/HeaderButton.tsx": $$$$$2,
     "./islands/HeaderResponsive.tsx": $$$$$1,
-    "./islands/Maps.tsx": $$$$$4,
+    "./islands/Maps.tsx": $$$$$5,
     "./islands/Programacao.tsx": $$$$$0,
   },
   "sections": {
