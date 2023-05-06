@@ -6,18 +6,18 @@ import config from "./deno.json" assert { type: "json" };
 import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$0 from "./routes/_app.tsx";
-import * as $$$$$0 from "./islands/CountDays.tsx";
-import * as $$$$$1 from "./islands/CountR.tsx";
-import * as $$$$$2 from "./islands/HeaderResponsive.tsx";
-import * as $$$$$3 from "./islands/Maps.tsx";
-import * as $$$$$4 from "./islands/Programacao.tsx";
-import * as $$$$$$$$0 from "./sections/CountDown.tsx";
-import * as $$$$$$$$1 from "./sections/CountRegressive.tsx";
-import * as $$$$$$$$2 from "./sections/Festas.tsx";
-import * as $$$$$$$$3 from "./sections/Head.tsx";
-import * as $$$$$$$$4 from "./sections/Header.tsx";
-import * as $$$$$$$$5 from "./sections/Home.tsx";
-import * as $$$$$$$$6 from "./sections/ShareLocal.tsx";
+import * as $$$$$0 from "./islands/Programacao.tsx";
+import * as $$$$$1 from "./islands/HeaderResponsive.tsx";
+import * as $$$$$2 from "./islands/CountDays.tsx";
+import * as $$$$$3 from "./islands/CountR.tsx";
+import * as $$$$$4 from "./islands/Maps.tsx";
+import * as $$$$$$$$0 from "./sections/CountRegressive.tsx";
+import * as $$$$$$$$1 from "./sections/Festas.tsx";
+import * as $$$$$$$$2 from "./sections/Home.tsx";
+import * as $$$$$$$$3 from "./sections/CountDown.tsx";
+import * as $$$$$$$$4 from "./sections/Head.tsx";
+import * as $$$$$$$$5 from "./sections/ShareLocal.tsx";
+import * as $$$$$$$$6 from "./sections/Header.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -28,8 +28,9 @@ import * as $live_previews from "$live/routes/live/previews/[...block].tsx";
 import * as $live_catchall from "$live/routes/[...catchall].tsx";
 import * as i1$0 from "$live/handlers/devPage.ts";
 import * as i1$1 from "$live/handlers/fresh.ts";
-import * as i1$2 from "$live/handlers/router.ts";
-import * as i1$3 from "$live/handlers/routesSelection.ts";
+import * as i1$2 from "$live/handlers/proxy.ts";
+import * as i1$3 from "$live/handlers/router.ts";
+import * as i1$4 from "$live/handlers/routesSelection.ts";
 import * as i1$$0 from "$live/pages/LivePage.tsx";
 import * as i1$$$0 from "$live/sections/PageInclude.tsx";
 import * as i1$$$1 from "$live/sections/Slot.tsx";
@@ -38,9 +39,10 @@ import * as i1$$$$0 from "$live/matchers/MatchAlways.ts";
 import * as i1$$$$1 from "$live/matchers/MatchDate.ts";
 import * as i1$$$$2 from "$live/matchers/MatchEnvironment.ts";
 import * as i1$$$$3 from "$live/matchers/MatchMulti.ts";
-import * as i1$$$$4 from "$live/matchers/MatchRandom.ts";
-import * as i1$$$$5 from "$live/matchers/MatchSite.ts";
-import * as i1$$$$6 from "$live/matchers/MatchUserAgent.ts";
+import * as i1$$$$4 from "$live/matchers/MatchOrigin.ts";
+import * as i1$$$$5 from "$live/matchers/MatchRandom.ts";
+import * as i1$$$$6 from "$live/matchers/MatchSite.ts";
+import * as i1$$$$7 from "$live/matchers/MatchUserAgent.ts";
 import * as i1$$$$$0 from "$live/flags/audience.ts";
 import * as i1$$$$$1 from "$live/flags/everyone.ts";
 
@@ -61,29 +63,30 @@ const manifest = {
     "./routes/live/workbench.ts": $live_workbench,
   },
   "islands": {
-    "./islands/CountDays.tsx": $$$$$0,
-    "./islands/CountR.tsx": $$$$$1,
-    "./islands/HeaderResponsive.tsx": $$$$$2,
-    "./islands/Maps.tsx": $$$$$3,
-    "./islands/Programacao.tsx": $$$$$4,
+    "./islands/CountDays.tsx": $$$$$2,
+    "./islands/CountR.tsx": $$$$$3,
+    "./islands/HeaderResponsive.tsx": $$$$$1,
+    "./islands/Maps.tsx": $$$$$4,
+    "./islands/Programacao.tsx": $$$$$0,
   },
   "sections": {
     "$live/sections/PageInclude.tsx": i1$$$0,
     "$live/sections/Slot.tsx": i1$$$1,
     "$live/sections/UseSlot.tsx": i1$$$2,
-    "deco-sites/pphoje/sections/CountDown.tsx": $$$$$$$$0,
-    "deco-sites/pphoje/sections/CountRegressive.tsx": $$$$$$$$1,
-    "deco-sites/pphoje/sections/Festas.tsx": $$$$$$$$2,
-    "deco-sites/pphoje/sections/Head.tsx": $$$$$$$$3,
-    "deco-sites/pphoje/sections/Header.tsx": $$$$$$$$4,
-    "deco-sites/pphoje/sections/Home.tsx": $$$$$$$$5,
-    "deco-sites/pphoje/sections/ShareLocal.tsx": $$$$$$$$6,
+    "deco-sites/pphoje/sections/CountDown.tsx": $$$$$$$$3,
+    "deco-sites/pphoje/sections/CountRegressive.tsx": $$$$$$$$0,
+    "deco-sites/pphoje/sections/Festas.tsx": $$$$$$$$1,
+    "deco-sites/pphoje/sections/Head.tsx": $$$$$$$$4,
+    "deco-sites/pphoje/sections/Header.tsx": $$$$$$$$6,
+    "deco-sites/pphoje/sections/Home.tsx": $$$$$$$$2,
+    "deco-sites/pphoje/sections/ShareLocal.tsx": $$$$$$$$5,
   },
   "handlers": {
     "$live/handlers/devPage.ts": i1$0,
     "$live/handlers/fresh.ts": i1$1,
-    "$live/handlers/router.ts": i1$2,
-    "$live/handlers/routesSelection.ts": i1$3,
+    "$live/handlers/proxy.ts": i1$2,
+    "$live/handlers/router.ts": i1$3,
+    "$live/handlers/routesSelection.ts": i1$4,
   },
   "pages": {
     "$live/pages/LivePage.tsx": i1$$0,
@@ -93,9 +96,10 @@ const manifest = {
     "$live/matchers/MatchDate.ts": i1$$$$1,
     "$live/matchers/MatchEnvironment.ts": i1$$$$2,
     "$live/matchers/MatchMulti.ts": i1$$$$3,
-    "$live/matchers/MatchRandom.ts": i1$$$$4,
-    "$live/matchers/MatchSite.ts": i1$$$$5,
-    "$live/matchers/MatchUserAgent.ts": i1$$$$6,
+    "$live/matchers/MatchOrigin.ts": i1$$$$4,
+    "$live/matchers/MatchRandom.ts": i1$$$$5,
+    "$live/matchers/MatchSite.ts": i1$$$$6,
+    "$live/matchers/MatchUserAgent.ts": i1$$$$7,
   },
   "flags": {
     "$live/flags/audience.ts": i1$$$$$0,

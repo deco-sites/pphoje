@@ -94,7 +94,7 @@ function HeaderResponsive({ sections }: Props) {
         </div>
       </nav>
       {isModalOpen && (
-        <div class="fixed w-full bg-gray-800 bg-opacity-1 z-50 h-full">
+        <div class="fixed w-full bg-white opacity-90 z-50 h-full">
           <div class="flex flex-col gap-[180px]">
             <div>
               <ul class="flex flex-col list-none space-y-4">
