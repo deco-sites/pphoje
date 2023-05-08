@@ -1,10 +1,11 @@
 import Modal from "../islands/Modal.tsx";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 import { AvailableIcons } from "../components/ui/Icon.tsx";
-export interface SocialMedia {
+
+export type SocialMedia = {
   link?: string;
   icon?: AvailableIcons;
-}
+};
 export interface Artist {
   desktop?: LiveImage;
   mobile?: LiveImage;

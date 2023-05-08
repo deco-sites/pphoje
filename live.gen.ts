@@ -8,11 +8,12 @@ import * as $0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$0 from "./routes/_app.tsx";
 import * as $$$$$0 from "./islands/CountDays.tsx";
 import * as $$$$$1 from "./islands/CountR.tsx";
-import * as $$$$$2 from "./islands/HeaderButton.tsx";
-import * as $$$$$3 from "./islands/HeaderResponsive.tsx";
-import * as $$$$$4 from "./islands/Maps.tsx";
-import * as $$$$$5 from "./islands/Modal.tsx";
-import * as $$$$$6 from "./islands/Programacao.tsx";
+import * as $$$$$2 from "./islands/HashLink.tsx";
+import * as $$$$$3 from "./islands/HeaderButton.tsx";
+import * as $$$$$4 from "./islands/HeaderResponsive.tsx";
+import * as $$$$$5 from "./islands/Maps.tsx";
+import * as $$$$$6 from "./islands/Modal.tsx";
+import * as $$$$$7 from "./islands/Programacao.tsx";
 import * as $$$$$$$$0 from "./sections/CountDown.tsx";
 import * as $$$$$$$$1 from "./sections/CountRegressive.tsx";
 import * as $$$$$$$$2 from "./sections/Festas.tsx";
@@ -68,11 +69,12 @@ const manifest = {
   "islands": {
     "./islands/CountDays.tsx": $$$$$0,
     "./islands/CountR.tsx": $$$$$1,
-    "./islands/HeaderButton.tsx": $$$$$2,
-    "./islands/HeaderResponsive.tsx": $$$$$3,
-    "./islands/Maps.tsx": $$$$$4,
-    "./islands/Modal.tsx": $$$$$5,
-    "./islands/Programacao.tsx": $$$$$6,
+    "./islands/HashLink.tsx": $$$$$2,
+    "./islands/HeaderButton.tsx": $$$$$3,
+    "./islands/HeaderResponsive.tsx": $$$$$4,
+    "./islands/Maps.tsx": $$$$$5,
+    "./islands/Modal.tsx": $$$$$6,
+    "./islands/Programacao.tsx": $$$$$7,
   },
   "sections": {
     "$live/sections/PageInclude.tsx": i1$$$0,

@@ -34,7 +34,6 @@ function Navbar({ items }: { items: INavItem[] }) {
         <div class="flex-auto flex justify-center">
           {items.map((item) => <NavItem item={item} />)}
         </div>
-        
       </div>
     </>
   );
