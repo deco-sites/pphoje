@@ -18,6 +18,7 @@
               "./islands/HeaderButton.tsx",
               "./islands/HeaderResponsive.tsx",
               "./islands/Maps.tsx",
+              "./islands/Modal.tsx",
               "./islands/Programacao.tsx",
               "$live/handlers/devPage.ts",
               "$live/handlers/fresh.ts",
@@ -34,6 +35,7 @@
               "deco-sites/pphoje/sections/Head.tsx",
               "deco-sites/pphoje/sections/Header.tsx",
               "deco-sites/pphoje/sections/Home.tsx",
+              "deco-sites/pphoje/sections/lineUp.tsx",
               "deco-sites/pphoje/sections/ShareLocal.tsx",
               "$live/matchers/MatchAlways.ts",
               "$live/matchers/MatchDate.ts",
@@ -113,6 +115,220 @@
         "sections"
       ],
       "title": "deco-sites/pphoje/islands/HeaderResponsive.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image": {
+      "type": "string",
+      "format": "image-uri",
+      "title": "Image"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvbGluZVVwLnRzeA==@SocialMedia": {
+      "type": "object",
+      "properties": {
+        "link": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Link"
+        },
+        "icon": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "ChevronLeft"
+            },
+            {
+              "type": "string",
+              "const": "ChevronRight"
+            },
+            {
+              "type": "string",
+              "const": "ChevronUp"
+            },
+            {
+              "type": "string",
+              "const": "ChevronDown"
+            },
+            {
+              "type": "string",
+              "const": "QuestionMarkCircle"
+            },
+            {
+              "type": "string",
+              "const": "User"
+            },
+            {
+              "type": "string",
+              "const": "ShoppingCart"
+            },
+            {
+              "type": "string",
+              "const": "Bars3"
+            },
+            {
+              "type": "string",
+              "const": "Heart"
+            },
+            {
+              "type": "string",
+              "const": "MagnifyingGlass"
+            },
+            {
+              "type": "string",
+              "const": "XMark"
+            },
+            {
+              "type": "string",
+              "const": "Plus"
+            },
+            {
+              "type": "string",
+              "const": "Minus"
+            },
+            {
+              "type": "string",
+              "const": "MapPin"
+            },
+            {
+              "type": "string",
+              "const": "Phone"
+            },
+            {
+              "type": "string",
+              "const": "Elo"
+            },
+            {
+              "type": "string",
+              "const": "Mastercard"
+            },
+            {
+              "type": "string",
+              "const": "Visa"
+            },
+            {
+              "type": "string",
+              "const": "Pix"
+            },
+            {
+              "type": "string",
+              "const": "Logo"
+            },
+            {
+              "type": "string",
+              "const": "Facebook"
+            },
+            {
+              "type": "string",
+              "const": "Instagram"
+            },
+            {
+              "type": "string",
+              "const": "Tiktok"
+            },
+            {
+              "type": "string",
+              "const": "Truck"
+            },
+            {
+              "type": "string",
+              "const": "Discount"
+            },
+            {
+              "type": "string",
+              "const": "Return"
+            },
+            {
+              "type": "string",
+              "const": "CreditCard"
+            },
+            {
+              "type": "string",
+              "const": "Deco"
+            },
+            {
+              "type": "string",
+              "const": "Discord"
+            },
+            {
+              "type": "string",
+              "const": "Trash"
+            },
+            {
+              "type": "string",
+              "const": "FilterList"
+            },
+            {
+              "type": "string",
+              "const": "WhatsApp"
+            },
+            {
+              "type": "string",
+              "const": "ArrowsPointingOut"
+            }
+          ],
+          "type": "string",
+          "title": "Icon"
+        }
+      },
+      "required": [],
+      "title": "SocialMedia"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvbGluZVVwLnRzeA==@SocialMedia[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvbGluZVVwLnRzeA==@SocialMedia"
+      },
+      "title": "SocialMedia[]"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvbGluZVVwLnRzeA==@Artist": {
+      "type": "object",
+      "properties": {
+        "desktop": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Desktop"
+        },
+        "mobile": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Mobile"
+        },
+        "name": {
+          "type": "string",
+          "title": "Name"
+        },
+        "icons": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvbGluZVVwLnRzeA==@SocialMedia[]",
+          "title": "Icons"
+        },
+        "bio": {
+          "type": "string",
+          "title": "Bio"
+        }
+      },
+      "required": [
+        "name",
+        "bio"
+      ],
+      "title": "Artist"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvbGluZVVwLnRzeA==@Artist[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvbGluZVVwLnRzeA==@Artist"
+      },
+      "title": "Artist[]"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Nb2RhbC50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "performers": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvbGluZVVwLnRzeA==@Artist[]",
+          "title": "Performers"
+        }
+      },
+      "required": [
+        "performers"
+      ],
+      "title": "deco-sites/pphoje/islands/Modal.tsx@Props"
     },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page": {
       "$ref": "#/root/pages",
@@ -457,6 +673,19 @@
       ],
       "title": "deco-sites/pphoje/sections/Header.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvbGluZVVwLnRzeA==@LineUpProps": {
+      "type": "object",
+      "properties": {
+        "performers": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvbGluZVVwLnRzeA==@Artist[]",
+          "title": "Performers"
+        }
+      },
+      "required": [
+        "performers"
+      ],
+      "title": "deco-sites/pphoje/sections/lineUp.tsx@LineUpProps"
+    },
     "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRGF0ZS50cw==@Props": {
       "type": "object",
       "properties": {
@@ -762,6 +991,27 @@
             "./islands/Maps.tsx"
           ],
           "default": "./islands/Maps.tsx"
+        }
+      }
+    },
+    "Li9pc2xhbmRzL01vZGFsLnRzeA==": {
+      "title": "./islands/Modal.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Nb2RhbC50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/Modal.tsx"
+          ],
+          "default": "./islands/Modal.tsx"
         }
       }
     },
@@ -1076,6 +1326,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvbGluZVVwLnRzeA==": {
+      "title": "deco-sites/pphoje/sections/lineUp.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvbGluZVVwLnRzeA==@LineUpProps"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/pphoje/sections/lineUp.tsx"
+          ],
+          "default": "deco-sites/pphoje/sections/lineUp.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvU2hhcmVMb2NhbC50c3g=": {
       "title": "deco-sites/pphoje/sections/ShareLocal.tsx",
       "type": "object",
@@ -1365,6 +1636,9 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL01hcHMudHN4"
         },
         {
+          "$ref": "#/definitions/Li9pc2xhbmRzL01vZGFsLnRzeA=="
+        },
+        {
           "$ref": "#/definitions/Li9pc2xhbmRzL1Byb2dyYW1hY2FvLnRzeA=="
         }
       ]
@@ -1435,6 +1709,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSG9tZS50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvbGluZVVwLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvU2hhcmVMb2NhbC50c3g="
