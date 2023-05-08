@@ -89,7 +89,9 @@ function Programacao() {
   const festa1 = festas.pp;
   return (
     <div>
-      <h2 class="text-center text-[22px] text-blue" id="parque-do-povo">Parque do Povo</h2>
+      <h2 class="text-center text-[22px] text-blue" id="parque-do-povo">
+        Parque do Povo
+      </h2>
       {Object.keys(festa1).map((dia) => (
         <div key={dia}>
           <h3>Dia {dia}</h3>

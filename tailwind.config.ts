@@ -36,6 +36,16 @@ export default {
         "slide-bottom": "slide-bottom-frame 0.4s ease normal",
         "progress": "progress-frame ease normal",
       },
+      colors: {
+        "red-card": "#2C0000",
+        "black-custom": "rgba(47, 39, 41, 0.87)",
+        "purple-custom": "rgba(120, 41, 182, 0.87)",
+        "modal-custom-bg": "#F4F1E9",
+        "modal-custom-text": " #504746",
+      },
+      positions: {
+        "bt-1": "50%",
+      },
       keyframes: {
         "slide-left-frame": {
           from: { transform: "translateX(100%)" },
