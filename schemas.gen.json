@@ -15,6 +15,7 @@
               "deco-sites/pphoje/functions/LoadGitHubRaw.ts",
               "./islands/CountDays.tsx",
               "./islands/CountR.tsx",
+              "./islands/HashLink.tsx",
               "./islands/HeaderButton.tsx",
               "./islands/HeaderResponsive.tsx",
               "./islands/Maps.tsx",
@@ -941,6 +942,22 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0hhc2hMaW5rLnRzeA==": {
+      "title": "./islands/HashLink.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/HashLink.tsx"
+          ],
+          "default": "./islands/HashLink.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0hlYWRlckJ1dHRvbi50c3g=": {
       "title": "./islands/HeaderButton.tsx",
       "type": "object",
@@ -1625,6 +1642,9 @@
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0NvdW50Ui50c3g="
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0hhc2hMaW5rLnRzeA=="
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlckJ1dHRvbi50c3g="
