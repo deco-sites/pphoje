@@ -21,3 +21,9 @@
     display: none;
   }
 }
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
