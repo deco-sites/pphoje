@@ -1,112 +1,75 @@
-interface CasaDeFesta {
-  [dia: string]: {
-    [cantor: string]: {
-      nome: string;
-      bio: string;
-      hora_do_show: Date;
-    };
-  };
+export interface IDate {
+    /**
+     * @format date-time
+     */
+    dia: string;
+}
+export interface IParty {
+    id?: string;
+    name?: string;
+    houses?: Array<IHouse>;
+}
+  
+export interface IHouse {
+    name?: string;
+    days?: Array<IDay>;
+}
+  
+export interface IDay {
+    date: IDate;
+    artists?: Array<IArtist>;
+}
+  
+export interface IArtist {
+    name?: string;
+    bio?: string;
+    socialMedia?: Array<string>;
+    showDateTime: IDate;
+}
+  export interface Props{
+    festas?: IParty[]
+  }
+function formatarData(data: string){
+  const partes = data.split(/[-T.:Z]/);
+  const mes = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'][parseInt(partes[1], 10) - 1];
+  return [partes[2], ` de ${mes} `, partes[3] + ':' + partes[4]];
 }
 
-const festas: {
-  [nome_casa: string]: CasaDeFesta;
-} = {
-  pp: {
-    dia1: {
-      cantor1: {
-        nome: "Nome Cantor 1",
-        bio: "Bio Cantor 1",
-        hora_do_show: new Date(),
-      },
-      cantor2: {
-        nome: "Nome Cantor 2",
-        bio: "Bio Cantor 2",
-        hora_do_show: new Date(),
-      },
-      cantor3: {
-        nome: "Nome Cantor 3",
-        bio: "Bio Cantor 3",
-        hora_do_show: new Date(),
-      },
-    },
-    dia2: {
-      cantor1: {
-        nome: "Nome Cantor 1",
-        bio: "Bio Cantor 1",
-        hora_do_show: new Date(),
-      },
-      cantor2: {
-        nome: "Nome Cantor 2",
-        bio: "Bio Cantor 2",
-        hora_do_show: new Date(),
-      },
-      cantor3: {
-        nome: "Nome Cantor 3",
-        bio: "Bio Cantor 3",
-        hora_do_show: new Date(),
-      },
-    },
-  },
-  sitioSJ: {
-    dia1: {
-      cantor1: {
-        nome: "Nome Cantor 1",
-        bio: "Bio Cantor 1",
-        hora_do_show: new Date(),
-      },
-      cantor2: {
-        nome: "Nome Cantor 2",
-        bio: "Bio Cantor 2",
-        hora_do_show: new Date(),
-      },
-      cantor3: {
-        nome: "Nome Cantor 3",
-        bio: "Bio Cantor 3",
-        hora_do_show: new Date(),
-      },
-    },
-    dia2: {
-      cantor1: {
-        nome: "Nome Cantor 1",
-        bio: "Bio Cantor 1",
-        hora_do_show: new Date(),
-      },
-      cantor2: {
-        nome: "Nome Cantor 2",
-        bio: "Bio Cantor 2",
-        hora_do_show: new Date(),
-      },
-      cantor3: {
-        nome: "Nome Cantor 3",
-        bio: "Bio Cantor 3",
-        hora_do_show: new Date(),
-      },
-    },
-  },
-};
 
-function Programacao() {
-  const festa1 = festas.pp;
-  return (
-    <div>
-      <h2 class="text-center text-[22px] text-blue" id="parque-do-povo">
-        Parque do Povo
-      </h2>
-      {Object.keys(festa1).map((dia) => (
-        <div key={dia}>
-          <h3>Dia {dia}</h3>
-          {Object.keys(festa1[dia]).map((cantor) => (
-            <div key={cantor}>
-              <h4>{cantor}</h4>
-              <p>Nome: {festa1[dia][cantor].nome}</p>
-              <p>Bio: {festa1[dia][cantor].bio}</p>
-              <p>Hora do show: {festa1[dia][cantor].hora_do_show.toString()}</p>
-            </div>
-          ))}
-        </div>
-      ))}
-    </div>
-  );
-}
-
-export default Programacao;
+  function Programacao({ festas}:Props) {
+    return (
+      <div>
+        <h1>Seja bem vindo</h1>
+        {festas && festas?.map((festa) => (
+          <div key={festa.id}>
+            <h2>{festa.name}</h2>
+            {festa.houses?.map((house) => (
+              <div key={house.name}>
+                <h3>{house.name}*</h3>
+                {house.days?.map((day) => (
+                  <div key={day} class="flex w-full bg-yellow-300 mb-4 h-[84px]">
+                    <div class="flex flex-col items-center justify-center w-[20%]">
+                        <h4>{formatarData(day.date.dia)[0]}</h4>
+                        <h4>{formatarData(day.date.dia)[1]}</h4>
+                    </div>
+                    <div class="w-[60%]">
+                    {day.artists?.map((artist) => (
+                        <ul class="flex flex-row bg-red-300">
+                            <li class="flex flex-row">{artist.name} </li>
+                        </ul>                   
+                    ))}
+                    </div>
+                    <div class="flex justify-center items-cente w-[20%]">
+                        <button>+</button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    );
+  }
+  
+  export default Programacao

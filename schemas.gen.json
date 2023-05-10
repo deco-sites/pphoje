@@ -331,6 +331,141 @@
       ],
       "title": "deco-sites/pphoje/islands/Modal.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IDate": {
+      "type": "object",
+      "properties": {
+        "dia": {
+          "type": "string",
+          "format": "date-time",
+          "title": "Dia"
+        }
+      },
+      "required": [
+        "dia"
+      ],
+      "title": "IDate"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IArtist": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Name"
+        },
+        "bio": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Bio"
+        },
+        "socialMedia": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Social Media"
+        },
+        "showDateTime": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IDate",
+          "title": "Show Date Time"
+        }
+      },
+      "required": [
+        "showDateTime"
+      ],
+      "title": "IArtist"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IDay": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IDate",
+          "title": "Date"
+        },
+        "artists": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IArtist"
+          },
+          "title": "Artists"
+        }
+      },
+      "required": [
+        "date"
+      ],
+      "title": "IDay"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IHouse": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Name"
+        },
+        "days": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IDay"
+          },
+          "title": "Days"
+        }
+      },
+      "required": [],
+      "title": "IHouse"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IParty": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Id"
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Name"
+        },
+        "houses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IHouse"
+          },
+          "title": "Houses"
+        }
+      },
+      "required": [],
+      "title": "IParty"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IParty[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IParty"
+      },
+      "title": "IParty[]"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "festas": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IParty[]",
+          "title": "Festas"
+        }
+      },
+      "required": [],
+      "title": "deco-sites/pphoje/islands/Programacao.tsx@Props"
+    },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page": {
       "$ref": "#/root/pages",
       "title": "Page"
@@ -589,6 +724,139 @@
         "sections"
       ],
       "title": "deco-cx/live/sections/UseSlot.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@IDate": {
+      "type": "object",
+      "properties": {
+        "dia": {
+          "type": "string",
+          "format": "date-time",
+          "title": "Dia"
+        }
+      },
+      "required": [
+        "dia"
+      ],
+      "title": "IDate"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@IArtist": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Name"
+        },
+        "bio": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Bio"
+        },
+        "socialMedia": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Social Media"
+        },
+        "showDateTime": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@IDate",
+          "title": "Show Date Time"
+        }
+      },
+      "required": [
+        "showDateTime"
+      ],
+      "title": "IArtist"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@IDay": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@IDate",
+          "title": "Date"
+        },
+        "artists": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@IArtist"
+          },
+          "title": "Artists"
+        }
+      },
+      "required": [
+        "date"
+      ],
+      "title": "IDay"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@IHouse": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Name"
+        },
+        "days": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@IDay"
+          },
+          "title": "Days"
+        }
+      },
+      "required": [
+        "days"
+      ],
+      "title": "IHouse"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@IParty": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Id"
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Name"
+        },
+        "houses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@IHouse"
+          },
+          "title": "Houses"
+        }
+      },
+      "required": [],
+      "title": "IParty"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "festas": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@IParty"
+          },
+          "title": "Festas"
+        }
+      },
+      "required": [],
+      "title": "deco-sites/pphoje/sections/Festas.tsx@Props"
     },
     "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSGVhZC50c3g=@Props": {
       "type": "object",
@@ -1035,6 +1303,11 @@
     "Li9pc2xhbmRzL1Byb2dyYW1hY2FvLnRzeA==": {
       "title": "./islands/Programacao.tsx",
       "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@Props"
+        }
+      ],
       "required": [
         "__resolveType"
       ],
@@ -1272,6 +1545,11 @@
     "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==": {
       "title": "deco-sites/pphoje/sections/Festas.tsx",
       "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@Props"
+        }
+      ],
       "required": [
         "__resolveType"
       ],
