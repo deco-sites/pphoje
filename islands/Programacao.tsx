@@ -40,6 +40,7 @@ function formatarData(data: string){
     return (
       <div>
         <h1>Seja bem vindo</h1>
+        <h2 class="">teste de PR</h2>
         {festas && festas?.map((festa) => (
           <div key={festa.id}>
             <h2>{festa.name}</h2>
