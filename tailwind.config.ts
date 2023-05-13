@@ -38,8 +38,10 @@ export default {
       },
       colors: {
         "red-card": "#2C0000",
-        "black-custom": "rgba(47, 39, 41, 0.87)",
-        "purple-custom": "rgba(120, 41, 182, 0.87)",
+        "btn-default": "#7F1D1D",
+        "btn-hover": "#F59E0B",
+        "btn-gray": "#F3F4F6",
+        "default" : "#6A6A6A",
         "modal-custom-bg": "#F4F1E9",
         "modal-custom-text": " #504746",
       },

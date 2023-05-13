@@ -14,7 +14,6 @@
             "enum": [
               "deco-sites/pphoje/functions/LoadGitHubRaw.ts",
               "./islands/CountDays.tsx",
-              "./islands/CountR.tsx",
               "./islands/HashLink.tsx",
               "./islands/HeaderButton.tsx",
               "./islands/HeaderResponsive.tsx",
@@ -31,11 +30,11 @@
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
               "deco-sites/pphoje/sections/CountDown.tsx",
-              "deco-sites/pphoje/sections/CountRegressive.tsx",
               "deco-sites/pphoje/sections/Festas.tsx",
               "deco-sites/pphoje/sections/Head.tsx",
               "deco-sites/pphoje/sections/Header.tsx",
               "deco-sites/pphoje/sections/Home.tsx",
+              "deco-sites/pphoje/sections/Intro.tsx",
               "deco-sites/pphoje/sections/lineUp.tsx",
               "deco-sites/pphoje/sections/ShareLocal.tsx",
               "$live/matchers/MatchAlways.ts",
@@ -942,6 +941,121 @@
       ],
       "title": "deco-sites/pphoje/sections/Header.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSG9tZS50c3g=@Events": {
+      "type": "object",
+      "properties": {
+        "desktop": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Desktop"
+        },
+        "mobile": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Mobile"
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Title"
+        },
+        "text": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Text"
+        },
+        "label": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Label"
+        }
+      },
+      "required": [],
+      "title": "Events"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSG9tZS50c3g=@Events[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSG9tZS50c3g=@Events"
+      },
+      "title": "Events[]"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSG9tZS50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "festas": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSG9tZS50c3g=@Events[]",
+          "title": "Festas"
+        }
+      },
+      "required": [],
+      "title": "deco-sites/pphoje/sections/Home.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSW50cm8udHN4@IDate": {
+      "type": "object",
+      "properties": {
+        "dia": {
+          "type": "string",
+          "format": "date-time",
+          "title": "Dia"
+        }
+      },
+      "required": [
+        "dia"
+      ],
+      "title": "IDate"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSW50cm8udHN4@Artist": {
+      "type": "object",
+      "properties": {
+        "mobile": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Mobile"
+        },
+        "name": {
+          "type": "string",
+          "title": "Name"
+        },
+        "bio": {
+          "type": "string",
+          "title": "Bio"
+        },
+        "date": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSW50cm8udHN4@IDate",
+          "title": "Date"
+        }
+      },
+      "required": [
+        "name",
+        "bio",
+        "date"
+      ],
+      "title": "Artist"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSW50cm8udHN4@Artist[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSW50cm8udHN4@Artist"
+      },
+      "title": "Artist[]"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSW50cm8udHN4@Props": {
+      "type": "object",
+      "properties": {
+        "performers": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSW50cm8udHN4@Artist[]",
+          "title": "Performers"
+        }
+      },
+      "required": [
+        "performers"
+      ],
+      "title": "deco-sites/pphoje/sections/Intro.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvbGluZVVwLnRzeA==@LineUpProps": {
       "type": "object",
       "properties": {
@@ -1191,22 +1305,6 @@
             "./islands/CountDays.tsx"
           ],
           "default": "./islands/CountDays.tsx"
-        }
-      }
-    },
-    "Li9pc2xhbmRzL0NvdW50Ui50c3g=": {
-      "title": "./islands/CountR.tsx",
-      "type": "object",
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "./islands/CountR.tsx"
-          ],
-          "default": "./islands/CountR.tsx"
         }
       }
     },
@@ -1526,22 +1624,6 @@
         }
       }
     },
-    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvQ291bnRSZWdyZXNzaXZlLnRzeA==": {
-      "title": "deco-sites/pphoje/sections/CountRegressive.tsx",
-      "type": "object",
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/pphoje/sections/CountRegressive.tsx"
-          ],
-          "default": "deco-sites/pphoje/sections/CountRegressive.tsx"
-        }
-      }
-    },
     "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==": {
       "title": "deco-sites/pphoje/sections/Festas.tsx",
       "type": "object",
@@ -1608,6 +1690,11 @@
     "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSG9tZS50c3g=": {
       "title": "deco-sites/pphoje/sections/Home.tsx",
       "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSG9tZS50c3g=@Props"
+        }
+      ],
       "required": [
         "__resolveType"
       ],
@@ -1618,6 +1705,27 @@
             "deco-sites/pphoje/sections/Home.tsx"
           ],
           "default": "deco-sites/pphoje/sections/Home.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSW50cm8udHN4": {
+      "title": "deco-sites/pphoje/sections/Intro.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSW50cm8udHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/pphoje/sections/Intro.tsx"
+          ],
+          "default": "deco-sites/pphoje/sections/Intro.tsx"
         }
       }
     },
@@ -1919,9 +2027,6 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL0NvdW50RGF5cy50c3g="
         },
         {
-          "$ref": "#/definitions/Li9pc2xhbmRzL0NvdW50Ui50c3g="
-        },
-        {
           "$ref": "#/definitions/Li9pc2xhbmRzL0hhc2hMaW5rLnRzeA=="
         },
         {
@@ -1994,9 +2099,6 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvQ291bnREb3duLnRzeA=="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvQ291bnRSZWdyZXNzaXZlLnRzeA=="
-        },
-        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA=="
         },
         {
@@ -2007,6 +2109,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSG9tZS50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSW50cm8udHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvbGluZVVwLnRzeA=="

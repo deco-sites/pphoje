@@ -7,18 +7,14 @@ function CountDays() {
 
   const updateDaysRemaining = () => {
     const now: Date = new Date();
-    console.log("hoje: " + now);
     const difference: number = targetDate.getTime() - now.getTime();
     console.log(difference);
     let diasFaltantes: number;
     if (difference < 86400000) {
       diasFaltantes = 0;
-      console.log("hoje tem");
     } else {
       diasFaltantes = Math.floor(difference / (1000 * 60 * 60 * 24));
     }
-    console.log("dias faltantes: " + diasFaltantes);
-    console.log(diasFaltantes);
     setDays(diasFaltantes);
   };
 
@@ -31,20 +27,22 @@ function CountDays() {
   }, []);
 
   return (
-    <div>
+    <div class="bg-orange-400 h-[200px] flex flex-col items-center justify-center">
       <div>
         <h1 class="text-center text-[36px]">
-          O app do Maior São João do Mundo em Campina Grande - PB
+          Logotipo + Frase de efeito
         </h1>
       </div>
-      <div>
+      <div class="flex items-center justify-center">
         {days > 0
           ? (
-            <h2 class="text-purple-300 text-center text-[36px]">
-              faltam {days} dias
-            </h2>
+            <div class="flex flex-col items-center justify-center">
+              <h2>Faltam</h2>
+              <h2 class="text-[26px]">{days}</h2>
+              <h2>dias</h2>
+            </div>
           )
-          : <h3>Hoje Tem</h3>}
+          : null}
       </div>
     </div>
   );

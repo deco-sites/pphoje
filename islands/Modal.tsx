@@ -35,6 +35,9 @@ function Modal({ performers }: Props) {
   }
 
   const bestSingers = performers.slice(0, 3);
+  const teste = performers.slice(3, 7).filter((perfomer) =>
+  perfomer.desktop && perfomer.mobile
+  );
   const almostGood = performers.slice(3, 7).filter((perfomer) =>
     perfomer.desktop && perfomer.mobile
   );
