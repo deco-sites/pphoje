@@ -1,29 +1,30 @@
-function Home() {
+import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
+
+export interface Events{
+  desktop?: LiveImage;
+  mobile?: LiveImage;
+  title?: string;
+  text?: string;
+  label?: string;
+}
+export interface Props{
+  festas?: Events[];
+}
+
+function Home({festas}: Props) {
   return (
-    <div class="flex flex-col items-center">
-      <div class="flex flex-col mt-4 gap-4">
-        <button class="px-2 py-2 bg-gray-300 rounded-full">
-          veja a programação completa
-        </button>
-        <button class="px-2 py-2 bg-gray-300 rounded-full">
-          Compartilhar que vai Hoje
-        </button>
-      </div>
-      <div class="w-[400px]">
-        <h1>O São João de Campina</h1>
-        <img
-          src="https://www.segueviagem.com.br/wp-content/uploads/2019/06/Parque-do-Povo-Campina-Grande-Cr%C3%A9dito-Emanuel-Tadeu.jpg"
-          alt="teste"
-        />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nemo
-          nihil quia aut. Molestiae asperiores esse omnis molestias, optio
-          assumenda commodi aliquid repudiandae repellendus voluptates amet
-          magnam est iure eaque ratione ea saepe beatae natus sequi quia at. Ut
-          quam rem dignissimos molestias saepe aliquam similique assumenda
-          excepturi, neque, quas, delectus velit labore rerum deleniti ullam
-          explicabo maxime obcaecati. Autem!
-        </p>
+    <div class="flex flex-col mt-4">
+      <div class="mt-2">
+        {festas?.map((evento, index) =>(
+          <div class="flex flex-col gap-2">
+            <h1 class="text-black text-[22px]">{evento.title}</h1>
+            <img src={evento.mobile} class="max-w-[400px]"></img>
+            <span>{evento.text}</span>
+            <div class="max-w-[200px]">
+                <button class="bg-btn-default text-white py-2 px-2 rounded-[5px]">{evento.label}</button>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
