@@ -1,5 +1,5 @@
 import PlusBtn from  "../components/ui/icons/PlusBtn.tsx"
-import { useState, useEffect, useRef } from "preact/hooks";
+import { useState, } from "preact/hooks";
 export interface IDate {
     /**
      * @format date-time
@@ -50,7 +50,7 @@ function formatarData(data: string){
     function handleMouseOut() {
       setHoveredIndex(-1);
     }
-    function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    function handleChange(e: Event) {
       const inputElement = e.target as HTMLInputElement;
       setBusca(inputElement.value);
     }
