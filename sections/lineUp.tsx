@@ -1,6 +1,7 @@
 import Modal from "../islands/Modal.tsx";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 import { AvailableIcons } from "../components/ui/Icon.tsx";
+import BackToTop from "../islands/BackToTop.tsx";
 
 export type SocialMedia = {
   link?: string;
@@ -19,6 +20,7 @@ export interface LineUpProps {
 function lineUp({ performers }: LineUpProps) {
   return (
     <div>
+      <BackToTop />
       <Modal performers={performers} />
     </div>
   );

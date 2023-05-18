@@ -6,13 +6,14 @@ import config from "./deno.json" assert { type: "json" };
 import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$0 from "./routes/_app.tsx";
-import * as $$$$$0 from "./islands/CountDays.tsx";
-import * as $$$$$1 from "./islands/HashLink.tsx";
-import * as $$$$$2 from "./islands/HeaderButton.tsx";
-import * as $$$$$3 from "./islands/HeaderResponsive.tsx";
-import * as $$$$$4 from "./islands/Maps.tsx";
-import * as $$$$$5 from "./islands/Modal.tsx";
-import * as $$$$$6 from "./islands/Programacao.tsx";
+import * as $$$$$0 from "./islands/BackToTop.tsx";
+import * as $$$$$1 from "./islands/CountDays.tsx";
+import * as $$$$$2 from "./islands/HashLink.tsx";
+import * as $$$$$3 from "./islands/HeaderButton.tsx";
+import * as $$$$$4 from "./islands/HeaderResponsive.tsx";
+import * as $$$$$5 from "./islands/Maps.tsx";
+import * as $$$$$6 from "./islands/Modal.tsx";
+import * as $$$$$7 from "./islands/Programacao.tsx";
 import * as $$$$$$$$0 from "./sections/CountDown.tsx";
 import * as $$$$$$$$1 from "./sections/Festas.tsx";
 import * as $$$$$$$$2 from "./sections/Head.tsx";
@@ -20,7 +21,8 @@ import * as $$$$$$$$3 from "./sections/Header.tsx";
 import * as $$$$$$$$4 from "./sections/Home.tsx";
 import * as $$$$$$$$5 from "./sections/Intro.tsx";
 import * as $$$$$$$$6 from "./sections/lineUp.tsx";
-import * as $$$$$$$$7 from "./sections/ShareLocal.tsx";
+import * as $$$$$$$$7 from "./sections/LineUpNames.tsx";
+import * as $$$$$$$$8 from "./sections/ShareLocal.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -66,13 +68,14 @@ const manifest = {
     "./routes/live/workbench.ts": $live_workbench,
   },
   "islands": {
-    "./islands/CountDays.tsx": $$$$$0,
-    "./islands/HashLink.tsx": $$$$$1,
-    "./islands/HeaderButton.tsx": $$$$$2,
-    "./islands/HeaderResponsive.tsx": $$$$$3,
-    "./islands/Maps.tsx": $$$$$4,
-    "./islands/Modal.tsx": $$$$$5,
-    "./islands/Programacao.tsx": $$$$$6,
+    "./islands/BackToTop.tsx": $$$$$0,
+    "./islands/CountDays.tsx": $$$$$1,
+    "./islands/HashLink.tsx": $$$$$2,
+    "./islands/HeaderButton.tsx": $$$$$3,
+    "./islands/HeaderResponsive.tsx": $$$$$4,
+    "./islands/Maps.tsx": $$$$$5,
+    "./islands/Modal.tsx": $$$$$6,
+    "./islands/Programacao.tsx": $$$$$7,
   },
   "sections": {
     "$live/sections/PageInclude.tsx": i1$$$0,
@@ -85,7 +88,8 @@ const manifest = {
     "deco-sites/pphoje/sections/Home.tsx": $$$$$$$$4,
     "deco-sites/pphoje/sections/Intro.tsx": $$$$$$$$5,
     "deco-sites/pphoje/sections/lineUp.tsx": $$$$$$$$6,
-    "deco-sites/pphoje/sections/ShareLocal.tsx": $$$$$$$$7,
+    "deco-sites/pphoje/sections/LineUpNames.tsx": $$$$$$$$7,
+    "deco-sites/pphoje/sections/ShareLocal.tsx": $$$$$$$$8,
   },
   "handlers": {
     "$live/handlers/devPage.ts": i1$0,

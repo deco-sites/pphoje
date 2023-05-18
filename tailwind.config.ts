@@ -30,6 +30,12 @@ export default {
       center: true,
     },
     extend: {
+      fontFamily: {
+        "pacifico": "Pacifico",
+        "lobster": ["Lobster", "cursive"],
+        "roboto": ["Roboto", "monospace"],
+        "rubik": ["Rubik", "sans-serif"],
+      },
       animation: {
         "slide-left": "slide-left-frame 0.4s ease normal",
         "slide-right": "slide-right-frame 0.4s ease normal",
@@ -41,7 +47,7 @@ export default {
         "btn-default": "#7F1D1D",
         "btn-hover": "#F59E0B",
         "btn-gray": "#F3F4F6",
-        "default" : "#6A6A6A",
+        "default": "#6A6A6A",
         "modal-custom-bg": "#F4F1E9",
         "modal-custom-text": " #504746",
       },
