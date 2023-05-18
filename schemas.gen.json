@@ -13,6 +13,7 @@
           "not": {
             "enum": [
               "deco-sites/pphoje/functions/LoadGitHubRaw.ts",
+              "./islands/BackToTop.tsx",
               "./islands/CountDays.tsx",
               "./islands/HashLink.tsx",
               "./islands/HeaderButton.tsx",
@@ -36,6 +37,7 @@
               "deco-sites/pphoje/sections/Home.tsx",
               "deco-sites/pphoje/sections/Intro.tsx",
               "deco-sites/pphoje/sections/lineUp.tsx",
+              "deco-sites/pphoje/sections/LineUpNames.tsx",
               "deco-sites/pphoje/sections/ShareLocal.tsx",
               "$live/matchers/MatchAlways.ts",
               "$live/matchers/MatchDate.ts",
@@ -394,7 +396,8 @@
         }
       },
       "required": [
-        "date"
+        "date",
+        "artists"
       ],
       "title": "IDay"
     },
@@ -1292,6 +1295,22 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0JhY2tUb1RvcC50c3g=": {
+      "title": "./islands/BackToTop.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/BackToTop.tsx"
+          ],
+          "default": "./islands/BackToTop.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0NvdW50RGF5cy50c3g=": {
       "title": "./islands/CountDays.tsx",
       "type": "object",
@@ -1750,6 +1769,22 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvTGluZVVwTmFtZXMudHN4": {
+      "title": "deco-sites/pphoje/sections/LineUpNames.tsx",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/pphoje/sections/LineUpNames.tsx"
+          ],
+          "default": "deco-sites/pphoje/sections/LineUpNames.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvU2hhcmVMb2NhbC50c3g=": {
       "title": "deco-sites/pphoje/sections/ShareLocal.tsx",
       "type": "object",
@@ -2024,6 +2059,9 @@
           "$ref": "#/definitions/Resolvable"
         },
         {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0JhY2tUb1RvcC50c3g="
+        },
+        {
           "$ref": "#/definitions/Li9pc2xhbmRzL0NvdW50RGF5cy50c3g="
         },
         {
@@ -2115,6 +2153,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvbGluZVVwLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvTGluZVVwTmFtZXMudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvU2hhcmVMb2NhbC50c3g="

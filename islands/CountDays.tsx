@@ -8,7 +8,6 @@ function CountDays() {
   const updateDaysRemaining = () => {
     const now: Date = new Date();
     const difference: number = targetDate.getTime() - now.getTime();
-    console.log(difference);
     let diasFaltantes: number;
     if (difference < 86400000) {
       diasFaltantes = 0;

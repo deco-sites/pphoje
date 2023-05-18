@@ -26,6 +26,13 @@ export default function HeadComponent({
       <meta name="theme-color" content={themeColor}></meta>
       <meta name="description" content={description} />
       <meta property="og:title" content={title} />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+        rel="stylesheet"
+      >
+      </link>
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={url} />

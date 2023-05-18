@@ -2,7 +2,6 @@ import type { LoaderContext } from "$live/types.ts";
 import type { SectionProps } from "$live/mod.ts";
 import Programacao from "../islands/Programacao.tsx";
 
-
 export interface IDate {
   /**
    * @format date-time
@@ -36,14 +35,12 @@ export interface Props {
   festas?: Array<IParty>;
 }
 
-function Festas({festas}:Props) {
-
+function Festas({ festas }: Props) {
   return (
     <div>
-      <Programacao festas={festas}/>
+      <Programacao festas={festas} />
     </div>
   );
 }
 
 export default Festas;
-

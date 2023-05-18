@@ -2,20 +2,20 @@ import { useState } from "preact/hooks";
 import { Artist } from "../../sections/lineUp.tsx";
 
 export interface Props {
-    artists: Artist[];
-    openModal: (index: number, type: string) => void;
+  artists: Artist[];
+  openModal: (index: number, type: string) => void;
 }
 
 export default function ArtistList({ artists, openModal }: Props) {
   const [selectedArtist, setSelectedArtist] = useState(-1);
 
-  const handleClick = (index:number) => {
+  const handleClick = (index: number) => {
     setSelectedArtist(index);
     openModal(index, "best");
   };
   return (
     <>
-      {artists.map((artist, index:number) => (
+      {artists.map((artist, index: number) => (
         <div
           class="cursor-pointer"
           onClick={() => handleClick(index)}
