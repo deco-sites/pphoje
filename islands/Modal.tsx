@@ -51,7 +51,7 @@ function Modal({ performers }: Props) {
     }
   };
   return (
-    <div class="md:max-w-[800px] md:mx-auto">
+    <div class="md:max-w-[800px] md:mx-auto" id="lineUp">
       <div class="grid grid-cols-3">
         {bestSingers.map((artist, index) => (
           <div
@@ -120,7 +120,7 @@ function Modal({ performers }: Props) {
       </div>
       <div>
         <div class="flex flex-col justify-center items-center">
-          <div class="bg-red-700 flex justify-center items-center rounded-md mt-4">
+          <div class="bg-btn-default flex justify-center items-center rounded-md mt-4">
             <p class="text-white font-bold text-[26px] mx-2">pp.hoje.com.br</p>
           </div>
           <p class="text-red-600 font-bold text-[26px]">e mais</p>

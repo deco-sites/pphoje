@@ -1,5 +1,3 @@
-import type { LoaderContext } from "$live/types.ts";
-import type { SectionProps } from "$live/mod.ts";
 import Programacao from "../islands/Programacao.tsx";
 
 export interface IDate {

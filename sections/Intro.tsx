@@ -62,12 +62,16 @@ function Intro({ performers }: Props) {
         ))}
       </div>
       <div class="flex justify-center items-center mt-2">
-        <button class="bg-btn-default text-white py-2 px-2 rounded-[5px]">
-          Programação completa
-        </button>
-        <button class="ml-2 bg-btn-default text-white py-2 px-2 rounded-[5px]">
-          Line Up
-        </button>
+        <a href="#lineUp">
+          <button class="bg-btn-default text-white py-2 px-2 rounded-[5px]">
+            Programação completa
+          </button>
+        </a>
+        <a href="#search">
+          <button class="ml-2 bg-btn-default text-white py-2 px-2 rounded-[5px]">
+            LineUp
+          </button>
+        </a>
       </div>
     </div>
   );

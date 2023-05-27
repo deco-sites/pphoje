@@ -20,6 +20,7 @@
   .scrollbar-none::-webkit-scrollbar {
     display: none;
   }
+  
 }
 
 @layer base {
@@ -53,6 +54,8 @@
   }
   html {
     @apply scroll-smooth;
+    
   }
+ 
   
 }
