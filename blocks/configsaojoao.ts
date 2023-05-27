@@ -5,7 +5,10 @@ import { Block, BlockModule, InstanceOf } from "$live/engine/block.ts";
 // deno-lint-ignore no-empty-interface
 export interface ConfigSaoJoao {}
 
-export type ConfigSaoJoaos = InstanceOf<typeof configSaoJoaoBlock, "#/root/configSaoJoaos">;
+export type ConfigSaoJoaos = InstanceOf<
+  typeof configSaoJoaoBlock,
+  "#/root/configSaoJoaos"
+>;
 
 // deno-lint-ignore no-explicit-any
 export type ConfigSaoJoaoFunc<TConfig = any> = (c: TConfig) => ConfigSaoJoao;

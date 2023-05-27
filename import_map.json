@@ -13,7 +13,8 @@
     "twind": "https://esm.sh/twind@0.16.17",
     "twind/": "https://esm.sh/twind@0.16.17/",
     "std/": "https://deno.land/std@0.181.0/",
-    "deco-sites/std/": "https://denopkg.com/deco-sites/std@1.9.9/"
+    "deco-sites/std/": "https://denopkg.com/deco-sites/std@1.9.9/",
+    "daisyui": "npm:daisyui@2.51.6"
   },
   "scopes": {
     "https://denopkg.com/deco-cx/live@67781f916826771987a793cd3188db34099525d5/": {

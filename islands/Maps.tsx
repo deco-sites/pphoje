@@ -49,7 +49,7 @@ function Maps() {
           <div>
             <button
               onClick={handleButtonClick}
-              class="cursor-pointer px-2 py-2 bg-blue-600"
+              class="btn "
             >
               Obter localização
             </button>

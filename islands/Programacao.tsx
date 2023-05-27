@@ -176,12 +176,13 @@ function Programacao({ festas }: Props) {
                         </button>
                         <div>
                           <h1>{selectedPerformer?.date.dia}</h1>
-                          {selectedPerformer?.artists && selectedPerformer?.artists.map((x, index) => (
-                            <div>
-                              <h1>{x.name}</h1>
-                              <h1>{x.bio}</h1>
-                            </div>
-                          ))}
+                          {selectedPerformer?.artists &&
+                            selectedPerformer?.artists.map((x, index) => (
+                              <div>
+                                <h1>{x.name}</h1>
+                                <h1>{x.bio}</h1>
+                              </div>
+                            ))}
                         </div>
                       </dialog>
                     </>
