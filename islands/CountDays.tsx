@@ -26,7 +26,7 @@ function CountDays() {
   }, []);
 
   return (
-    <div class="bg-orange-400 h-[200px] flex flex-col items-center justify-center">
+    <div class="bg-btn-default h-[200px] flex flex-col items-center justify-center">
       <div>
         <h1 class="text-center text-[36px]">
           Logotipo + Frase de efeito

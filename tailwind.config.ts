@@ -29,6 +29,9 @@ export default {
     container: {
       center: true,
     },
+    body: {
+      backgroundColor: "red",
+    },
     extend: {
       fontFamily: {
         "pacifico": "Pacifico",
@@ -44,8 +47,10 @@ export default {
       },
       colors: {
         "red-card": "#2C0000",
-        "btn-default": "#7F1D1D",
+        "btn-default": "#5669FF",
+        "btn-white": "#f4f4f4",
         "btn-hover": "#F59E0B",
+        "orange": "#FF8D5D",
         "btn-gray": "#F3F4F6",
         "default": "#6A6A6A",
         "modal-custom-bg": "#F4F1E9",

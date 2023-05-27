@@ -17,12 +17,12 @@ const BackToTop = () => {
     };
 
     if (typeof window !== "undefined") {
-      document.addEventListener('scroll', handleScroll);
+      document.addEventListener("scroll", handleScroll);
     }
 
     return () => {
       if (typeof window !== "undefined") {
-        document.removeEventListener('scroll', handleScroll);
+        document.removeEventListener("scroll", handleScroll);
       }
     };
   }, []);
@@ -34,7 +34,8 @@ const BackToTop = () => {
   return (
     <div>
       {show && (
-        <button class="flex items-center justify-center px-2 py-2 fixed bottom-[20px] right-[5px] border-none bg-green-500"
+        <button
+          class="flex items-center justify-center px-2 py-2 fixed bottom-[20px] right-[5px] border-none bg-green-400"
           style={{
             zIndex: 99,
             outline: "none",
@@ -43,7 +44,7 @@ const BackToTop = () => {
           onClick={handleBackToTop}
         >
           <span class="pl-1">
-          <ArrowUp/>  
+            <ArrowUp />
           </span>
         </button>
       )}
