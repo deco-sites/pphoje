@@ -6,50 +6,63 @@ import config from "./deno.json" assert { type: "json" };
 import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$0 from "./routes/_app.tsx";
-import * as $$$$$0 from "./islands/BackToTop.tsx";
-import * as $$$$$1 from "./islands/CountDays.tsx";
-import * as $$$$$2 from "./islands/HashLink.tsx";
-import * as $$$$$3 from "./islands/HeaderButton.tsx";
-import * as $$$$$4 from "./islands/HeaderResponsive.tsx";
-import * as $$$$$5 from "./islands/Maps.tsx";
-import * as $$$$$6 from "./islands/Modal.tsx";
-import * as $$$$$7 from "./islands/Programacao.tsx";
-import * as $$$$$$$$0 from "./sections/CountDown.tsx";
+import * as $$$$$0 from "./islands/Programacao.tsx";
+import * as $$$$$1 from "./islands/BackToTop.tsx";
+import * as $$$$$2 from "./islands/HeaderResponsive.tsx";
+import * as $$$$$3 from "./islands/HashLink.tsx";
+import * as $$$$$4 from "./islands/HeaderButton.tsx";
+import * as $$$$$5 from "./islands/CountDays.tsx";
+import * as $$$$$6 from "./islands/Maps.tsx";
+import * as $$$$$7 from "./islands/Modal.tsx";
+import * as $$$$$$$$0 from "./sections/LineUpNames.tsx";
 import * as $$$$$$$$1 from "./sections/Festas.tsx";
-import * as $$$$$$$$2 from "./sections/Head.tsx";
-import * as $$$$$$$$3 from "./sections/Header.tsx";
-import * as $$$$$$$$4 from "./sections/Home.tsx";
-import * as $$$$$$$$5 from "./sections/Intro.tsx";
-import * as $$$$$$$$6 from "./sections/lineUp.tsx";
-import * as $$$$$$$$7 from "./sections/LineUpNames.tsx";
-import * as $$$$$$$$8 from "./sections/ShareLocal.tsx";
+import * as $$$$$$$$2 from "./sections/Intro.tsx";
+import * as $$$$$$$$3 from "./sections/Home.tsx";
+import * as $$$$$$$$4 from "./sections/NextAttractions.tsx";
+import * as $$$$$$$$5 from "./sections/CountDown.tsx";
+import * as $$$$$$$$6 from "./sections/Head.tsx";
+import * as $$$$$$$$7 from "./sections/ShareLocal.tsx";
+import * as $$$$$$$$8 from "./sections/Header.tsx";
+import * as $$$$$$$$9 from "./sections/lineUp.tsx";
+import * as $$$$$$$$$$$$$0 from "./configssaojoao/Programacao.ts";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
+import * as $live_invoke_key from "$live/routes/live/invoke/[...key].ts";
 import * as $live_editorData from "$live/routes/live/editorData.ts";
 import * as $live_inspect from "$live/routes/live/inspect/[...block].ts";
+import * as $live_release from "$live/routes/live/release.ts";
 import * as $live_meta from "$live/routes/live/_meta.ts";
 import * as $live_previews from "$live/routes/live/previews/[...block].tsx";
 import * as $live_catchall from "$live/routes/[...catchall].tsx";
-import * as i1$0 from "$live/handlers/devPage.ts";
-import * as i1$1 from "$live/handlers/fresh.ts";
-import * as i1$2 from "$live/handlers/proxy.ts";
-import * as i1$3 from "$live/handlers/router.ts";
-import * as i1$4 from "$live/handlers/routesSelection.ts";
-import * as i1$$0 from "$live/pages/LivePage.tsx";
-import * as i1$$$0 from "$live/sections/PageInclude.tsx";
-import * as i1$$$1 from "$live/sections/Slot.tsx";
-import * as i1$$$2 from "$live/sections/UseSlot.tsx";
-import * as i1$$$$0 from "$live/matchers/MatchAlways.ts";
-import * as i1$$$$1 from "$live/matchers/MatchDate.ts";
-import * as i1$$$$2 from "$live/matchers/MatchEnvironment.ts";
-import * as i1$$$$3 from "$live/matchers/MatchMulti.ts";
-import * as i1$$$$4 from "$live/matchers/MatchOrigin.ts";
-import * as i1$$$$5 from "$live/matchers/MatchRandom.ts";
-import * as i1$$$$6 from "$live/matchers/MatchSite.ts";
-import * as i1$$$$7 from "$live/matchers/MatchUserAgent.ts";
-import * as i1$$$$$0 from "$live/flags/audience.ts";
-import * as i1$$$$$1 from "$live/flags/everyone.ts";
+import * as i1$0 from "$live/loaders/workflows/events.ts";
+import * as i1$1 from "$live/loaders/workflows/get.ts";
+import * as i1$$0 from "$live/handlers/devPage.ts";
+import * as i1$$1 from "$live/handlers/fresh.ts";
+import * as i1$$2 from "$live/handlers/proxy.ts";
+import * as i1$$3 from "$live/handlers/redirect.ts";
+import * as i1$$4 from "$live/handlers/router.ts";
+import * as i1$$5 from "$live/handlers/routesSelection.ts";
+import * as i1$$6 from "$live/handlers/workflowRunner.ts";
+import * as i1$$$0 from "$live/pages/LivePage.tsx";
+import * as i1$$$$0 from "$live/sections/PageInclude.tsx";
+import * as i1$$$$1 from "$live/sections/Slot.tsx";
+import * as i1$$$$2 from "$live/sections/UseSlot.tsx";
+import * as i1$$$$$0 from "$live/matchers/MatchAlways.ts";
+import * as i1$$$$$1 from "$live/matchers/MatchDate.ts";
+import * as i1$$$$$2 from "$live/matchers/MatchDevice.ts";
+import * as i1$$$$$3 from "$live/matchers/MatchEnvironment.ts";
+import * as i1$$$$$4 from "$live/matchers/MatchHost.ts";
+import * as i1$$$$$5 from "$live/matchers/MatchMulti.ts";
+import * as i1$$$$$6 from "$live/matchers/MatchRandom.ts";
+import * as i1$$$$$7 from "$live/matchers/MatchSite.ts";
+import * as i1$$$$$8 from "$live/matchers/MatchUserAgent.ts";
+import * as i1$$$$$$0 from "$live/flags/audience.ts";
+import * as i1$$$$$$1 from "$live/flags/everyone.ts";
+import * as i1$$$$$$$0 from "$live/actions/workflows/cancel.ts";
+import * as i1$$$$$$$1 from "$live/actions/workflows/run.ts";
+import * as i1$$$$$$$2 from "$live/actions/workflows/signal.ts";
+import * as i1$$$$$$$3 from "$live/actions/workflows/start.ts";
 
 const manifest = {
   "functions": {
@@ -63,57 +76,76 @@ const manifest = {
     "./routes/live/_meta.ts": $live_meta,
     "./routes/live/editorData.ts": $live_editorData,
     "./routes/live/inspect/[...block].ts": $live_inspect,
+    "./routes/live/invoke/[...key].ts": $live_invoke_key,
     "./routes/live/invoke/index.ts": $live_invoke,
     "./routes/live/previews/[...block].tsx": $live_previews,
+    "./routes/live/release.ts": $live_release,
     "./routes/live/workbench.ts": $live_workbench,
   },
   "islands": {
-    "./islands/BackToTop.tsx": $$$$$0,
-    "./islands/CountDays.tsx": $$$$$1,
-    "./islands/HashLink.tsx": $$$$$2,
-    "./islands/HeaderButton.tsx": $$$$$3,
-    "./islands/HeaderResponsive.tsx": $$$$$4,
-    "./islands/Maps.tsx": $$$$$5,
-    "./islands/Modal.tsx": $$$$$6,
-    "./islands/Programacao.tsx": $$$$$7,
+    "./islands/BackToTop.tsx": $$$$$1,
+    "./islands/CountDays.tsx": $$$$$5,
+    "./islands/HashLink.tsx": $$$$$3,
+    "./islands/HeaderButton.tsx": $$$$$4,
+    "./islands/HeaderResponsive.tsx": $$$$$2,
+    "./islands/Maps.tsx": $$$$$6,
+    "./islands/Modal.tsx": $$$$$7,
+    "./islands/Programacao.tsx": $$$$$0,
   },
   "sections": {
-    "$live/sections/PageInclude.tsx": i1$$$0,
-    "$live/sections/Slot.tsx": i1$$$1,
-    "$live/sections/UseSlot.tsx": i1$$$2,
-    "deco-sites/pphoje/sections/CountDown.tsx": $$$$$$$$0,
+    "$live/sections/PageInclude.tsx": i1$$$$0,
+    "$live/sections/Slot.tsx": i1$$$$1,
+    "$live/sections/UseSlot.tsx": i1$$$$2,
+    "deco-sites/pphoje/sections/CountDown.tsx": $$$$$$$$5,
     "deco-sites/pphoje/sections/Festas.tsx": $$$$$$$$1,
-    "deco-sites/pphoje/sections/Head.tsx": $$$$$$$$2,
-    "deco-sites/pphoje/sections/Header.tsx": $$$$$$$$3,
-    "deco-sites/pphoje/sections/Home.tsx": $$$$$$$$4,
-    "deco-sites/pphoje/sections/Intro.tsx": $$$$$$$$5,
-    "deco-sites/pphoje/sections/lineUp.tsx": $$$$$$$$6,
-    "deco-sites/pphoje/sections/LineUpNames.tsx": $$$$$$$$7,
-    "deco-sites/pphoje/sections/ShareLocal.tsx": $$$$$$$$8,
+    "deco-sites/pphoje/sections/Head.tsx": $$$$$$$$6,
+    "deco-sites/pphoje/sections/Header.tsx": $$$$$$$$8,
+    "deco-sites/pphoje/sections/Home.tsx": $$$$$$$$3,
+    "deco-sites/pphoje/sections/Intro.tsx": $$$$$$$$2,
+    "deco-sites/pphoje/sections/lineUp.tsx": $$$$$$$$9,
+    "deco-sites/pphoje/sections/LineUpNames.tsx": $$$$$$$$0,
+    "deco-sites/pphoje/sections/NextAttractions.tsx": $$$$$$$$4,
+    "deco-sites/pphoje/sections/ShareLocal.tsx": $$$$$$$$7,
+  },
+  "configssaojoao": {
+    "deco-sites/pphoje/configssaojoao/Programacao.ts": $$$$$$$$$$$$$0,
+  },
+  "loaders": {
+    "$live/loaders/workflows/events.ts": i1$0,
+    "$live/loaders/workflows/get.ts": i1$1,
   },
   "handlers": {
-    "$live/handlers/devPage.ts": i1$0,
-    "$live/handlers/fresh.ts": i1$1,
-    "$live/handlers/proxy.ts": i1$2,
-    "$live/handlers/router.ts": i1$3,
-    "$live/handlers/routesSelection.ts": i1$4,
+    "$live/handlers/devPage.ts": i1$$0,
+    "$live/handlers/fresh.ts": i1$$1,
+    "$live/handlers/proxy.ts": i1$$2,
+    "$live/handlers/redirect.ts": i1$$3,
+    "$live/handlers/router.ts": i1$$4,
+    "$live/handlers/routesSelection.ts": i1$$5,
+    "$live/handlers/workflowRunner.ts": i1$$6,
   },
   "pages": {
-    "$live/pages/LivePage.tsx": i1$$0,
+    "$live/pages/LivePage.tsx": i1$$$0,
   },
   "matchers": {
-    "$live/matchers/MatchAlways.ts": i1$$$$0,
-    "$live/matchers/MatchDate.ts": i1$$$$1,
-    "$live/matchers/MatchEnvironment.ts": i1$$$$2,
-    "$live/matchers/MatchMulti.ts": i1$$$$3,
-    "$live/matchers/MatchOrigin.ts": i1$$$$4,
-    "$live/matchers/MatchRandom.ts": i1$$$$5,
-    "$live/matchers/MatchSite.ts": i1$$$$6,
-    "$live/matchers/MatchUserAgent.ts": i1$$$$7,
+    "$live/matchers/MatchAlways.ts": i1$$$$$0,
+    "$live/matchers/MatchDate.ts": i1$$$$$1,
+    "$live/matchers/MatchDevice.ts": i1$$$$$2,
+    "$live/matchers/MatchEnvironment.ts": i1$$$$$3,
+    "$live/matchers/MatchHost.ts": i1$$$$$4,
+    "$live/matchers/MatchMulti.ts": i1$$$$$5,
+    "$live/matchers/MatchRandom.ts": i1$$$$$6,
+    "$live/matchers/MatchSite.ts": i1$$$$$7,
+    "$live/matchers/MatchUserAgent.ts": i1$$$$$8,
   },
   "flags": {
-    "$live/flags/audience.ts": i1$$$$$0,
-    "$live/flags/everyone.ts": i1$$$$$1,
+    "$live/flags/audience.ts": i1$$$$$$0,
+    "$live/flags/everyone.ts": i1$$$$$$1,
+  },
+  "actions": {
+    "$live/actions/workflows/cancel.ts": i1$$$$$$$0,
+    "$live/actions/workflows/run.ts": i1$$$$$$$1,
+    "$live/actions/workflows/signal.ts": i1$$$$$$$2,
+    "$live/actions/workflows/start.ts": i1$$$$$$$3,
   },
   "config": config,
   "baseUrl": import.meta.url,

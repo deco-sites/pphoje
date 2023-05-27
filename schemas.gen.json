@@ -13,6 +13,8 @@
           "not": {
             "enum": [
               "deco-sites/pphoje/functions/LoadGitHubRaw.ts",
+              "$live/loaders/workflows/events.ts",
+              "$live/loaders/workflows/get.ts",
               "./islands/BackToTop.tsx",
               "./islands/CountDays.tsx",
               "./islands/HashLink.tsx",
@@ -24,8 +26,10 @@
               "$live/handlers/devPage.ts",
               "$live/handlers/fresh.ts",
               "$live/handlers/proxy.ts",
+              "$live/handlers/redirect.ts",
               "$live/handlers/router.ts",
               "$live/handlers/routesSelection.ts",
+              "$live/handlers/workflowRunner.ts",
               "$live/pages/LivePage.tsx",
               "$live/sections/PageInclude.tsx",
               "$live/sections/Slot.tsx",
@@ -38,17 +42,24 @@
               "deco-sites/pphoje/sections/Intro.tsx",
               "deco-sites/pphoje/sections/lineUp.tsx",
               "deco-sites/pphoje/sections/LineUpNames.tsx",
+              "deco-sites/pphoje/sections/NextAttractions.tsx",
               "deco-sites/pphoje/sections/ShareLocal.tsx",
               "$live/matchers/MatchAlways.ts",
               "$live/matchers/MatchDate.ts",
+              "$live/matchers/MatchDevice.ts",
               "$live/matchers/MatchEnvironment.ts",
+              "$live/matchers/MatchHost.ts",
               "$live/matchers/MatchMulti.ts",
-              "$live/matchers/MatchOrigin.ts",
               "$live/matchers/MatchRandom.ts",
               "$live/matchers/MatchSite.ts",
               "$live/matchers/MatchUserAgent.ts",
               "$live/flags/audience.ts",
-              "$live/flags/everyone.ts"
+              "$live/flags/everyone.ts",
+              "$live/actions/workflows/cancel.ts",
+              "$live/actions/workflows/run.ts",
+              "$live/actions/workflows/signal.ts",
+              "$live/actions/workflows/start.ts",
+              "deco-sites/pphoje/configssaojoao/Programacao.ts"
             ]
           }
         }
@@ -79,6 +90,196 @@
         "path"
       ],
       "title": "deco-sites/pphoje/functions/LoadGitHubRaw.ts@Props"
+    },
+    "ZGVjby1jeC9kdXJhYmxlL2JhY2tlbmRzL2JhY2tlbmQudHM=@WorkflowExecution": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "title": "Id"
+            },
+            "alias": {
+              "type": "string",
+              "title": "Alias"
+            },
+            "completedAt": {
+              "title": "Completed At"
+            },
+            "status": {
+              "title": "Status"
+            },
+            "metadata": {
+              "title": "Metadata"
+            },
+            "input": {
+              "title": "Input"
+            },
+            "output": {
+              "title": "Output"
+            }
+          },
+          "required": [
+            "id",
+            "alias",
+            "status"
+          ],
+          "title": "deco-cx/durable/backends/backend.ts@WorkflowExecution"
+        },
+        {
+          "title": "$live/loaders/workflows/events.ts",
+          "description": "Get the workflow execution events.",
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "#/definitions/ZGVjby1jeC9saXZlL2xvYWRlcnMvd29ya2Zsb3dzL2V2ZW50cy50cw==@Props"
+            }
+          ],
+          "required": [
+            "__resolveType"
+          ],
+          "properties": {
+            "__resolveType": {
+              "type": "string",
+              "enum": [
+                "$live/loaders/workflows/events.ts"
+              ],
+              "default": "$live/loaders/workflows/events.ts"
+            }
+          }
+        }
+      ]
+    },
+    "ZGVjby1jeC9saXZlL2xvYWRlcnMvd29ya2Zsb3dzL2V2ZW50cy50cw==@Props": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "Id"
+        },
+        "page": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Page"
+        },
+        "pageSize": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Page Size"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "deco-cx/live/loaders/workflows/events.ts@Props"
+    },
+    "ZGVjby1jeC9kdXJhYmxlL2JhY2tlbmRzL2JhY2tlbmQudHM=@indexedAccessstatusWorkflowExecution": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "title": "Status"
+        }
+      },
+      "required": [
+        "status"
+      ],
+      "title": "indexedAccessstatusWorkflowExecution"
+    },
+    "ZGVjby1jeC9kdXJhYmxlL2JhY2tlbmRzL2JhY2tlbmQudHM=@indexedAccessinputWorkflowExecution": {
+      "type": "object",
+      "properties": {
+        "input": {
+          "title": "Input"
+        }
+      },
+      "required": [],
+      "title": "indexedAccessinputWorkflowExecution"
+    },
+    "ZGVjby1jeC9saXZlL2NvbW1vbnMvd29ya2Zsb3dzL3R5cGVzLnRz@WorkflowExecution": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "completedAt": {
+              "title": "Completed At"
+            },
+            "id": {
+              "type": "string",
+              "title": "Id"
+            },
+            "status": {
+              "$ref": "#/definitions/ZGVjby1jeC9kdXJhYmxlL2JhY2tlbmRzL2JhY2tlbmQudHM=@indexedAccessstatusWorkflowExecution",
+              "title": "Status"
+            },
+            "workflow": {
+              "type": "string",
+              "title": "Workflow"
+            },
+            "input": {
+              "$ref": "#/definitions/ZGVjby1jeC9kdXJhYmxlL2JhY2tlbmRzL2JhY2tlbmQudHM=@indexedAccessinputWorkflowExecution",
+              "title": "Input"
+            },
+            "output": {
+              "title": "Output"
+            },
+            "props": {
+              "title": "Props"
+            }
+          },
+          "required": [
+            "id",
+            "status",
+            "workflow"
+          ],
+          "title": "deco-cx/live/commons/workflows/types.ts@WorkflowExecution"
+        },
+        {
+          "title": "$live/loaders/workflows/get.ts",
+          "description": "Read the workflow execution information.",
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "#/definitions/ZGVjby1jeC9saXZlL2xvYWRlcnMvd29ya2Zsb3dzL2dldC50cw==@Props"
+            }
+          ],
+          "required": [
+            "__resolveType"
+          ],
+          "properties": {
+            "__resolveType": {
+              "type": "string",
+              "enum": [
+                "$live/loaders/workflows/get.ts"
+              ],
+              "default": "$live/loaders/workflows/get.ts"
+            }
+          }
+        }
+      ]
+    },
+    "ZGVjby1jeC9saXZlL2xvYWRlcnMvd29ya2Zsb3dzL2dldC50cw==@Props": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "title": "Id"
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "title": "deco-cx/live/loaders/workflows/get.ts@Props"
     },
     "ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9IZWFkZXJSZXNwb25zaXZlLnRzeA==@Item": {
       "type": "object",
@@ -396,8 +597,7 @@
         }
       },
       "required": [
-        "date",
-        "artists"
+        "date"
       ],
       "title": "IDay"
     },
@@ -419,7 +619,9 @@
           "title": "Days"
         }
       },
-      "required": [],
+      "required": [
+        "days"
+      ],
       "title": "IHouse"
     },
     "ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IParty": {
@@ -450,18 +652,14 @@
       "required": [],
       "title": "IParty"
     },
-    "ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IParty[]": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IParty"
-      },
-      "title": "IParty[]"
-    },
     "ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@Props": {
       "type": "object",
       "properties": {
         "festas": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IParty[]",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IParty"
+          },
           "title": "Festas"
         }
       },
@@ -520,16 +718,56 @@
       ],
       "title": "deco-cx/live/handlers/proxy.ts@Props"
     },
+    "ZGVjby1jeC9saXZlL2hhbmRsZXJzL3JlZGlyZWN0LnRz@RedirectConfig": {
+      "type": "object",
+      "properties": {
+        "to": {
+          "type": "string",
+          "title": "To"
+        }
+      },
+      "required": [
+        "to"
+      ],
+      "title": "deco-cx/live/handlers/redirect.ts@RedirectConfig"
+    },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler": {
       "$ref": "#/root/handlers",
       "title": "Handler"
     },
-    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler@record": {
-      "title": "Unknown record",
+    "ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route": {
       "type": "object",
-      "additionalProperties": {
-        "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler"
-      }
+      "properties": {
+        "pathTemplate": {
+          "type": "string",
+          "title": "Path Template"
+        },
+        "handler": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler",
+              "title": "Value"
+            }
+          },
+          "required": [
+            "value"
+          ],
+          "title": "Handler"
+        }
+      },
+      "required": [
+        "pathTemplate",
+        "handler"
+      ],
+      "title": "Route"
+    },
+    "ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route"
+      },
+      "title": "Route[]"
     },
     "ZGVjby1jeC9saXZlL2hhbmRsZXJzL3JvdXRlci50cw==@RouterConfig": {
       "type": "object",
@@ -542,7 +780,7 @@
           "title": "Base"
         },
         "routes": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler@record",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route[]",
           "title": "Routes"
         }
       },
@@ -573,6 +811,23 @@
         "audiences"
       ],
       "title": "deco-cx/live/handlers/routesSelection.ts@SelectionConfig"
+    },
+    "ZGVjby1jeC9saXZlL2Jsb2Nrcy93b3JrZmxvdy50cw==@Workflow": {
+      "$ref": "#/root/workflows",
+      "title": "Workflow"
+    },
+    "ZGVjby1jeC9saXZlL2hhbmRsZXJzL3dvcmtmbG93UnVubmVyLnRz@Config": {
+      "type": "object",
+      "properties": {
+        "workflow": {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy93b3JrZmxvdy50cw==@Workflow",
+          "title": "Workflow"
+        }
+      },
+      "required": [
+        "workflow"
+      ],
+      "title": "deco-cx/live/handlers/workflowRunner.ts@Config"
     },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Section": {
       "$ref": "#/root/sections",
@@ -1072,6 +1327,147 @@
       ],
       "title": "deco-sites/pphoje/sections/lineUp.tsx@LineUpProps"
     },
+    "ZGVjby1zaXRlcy9wcGhvamUvYmxvY2tzL2NvbmZpZ3Nhb2pvYW8udHM=@ConfigSaoJoao": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "title": "ConfigSaoJoao"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvY29uZmlnc3Nhb2pvYW8vUHJvZ3JhbWFjYW8udHM=@Programacao": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvYmxvY2tzL2NvbmZpZ3Nhb2pvYW8udHM=@ConfigSaoJoao"
+        }
+      ],
+      "properties": {
+        "days": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "title": "Label"
+              },
+              "venue": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "const": "Parque do Povo"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Vila Forró"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Sitio São João"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Salão do Artesanato"
+                  }
+                ],
+                "type": "string",
+                "title": "Venue"
+              },
+              "referenceDate": {
+                "type": "string",
+                "title": "Reference Date"
+              },
+              "attraction": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "label": {
+                      "type": "string",
+                      "title": "Label"
+                    },
+                    "date": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "title": "Date"
+                    },
+                    "description": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "title": "Description"
+                    },
+                    "location": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "title": "Location"
+                    },
+                    "latLocation": {
+                      "type": "object",
+                      "properties": {
+                        "lat": {
+                          "type": "number",
+                          "title": "Lat"
+                        },
+                        "lng": {
+                          "type": "number",
+                          "title": "Lng"
+                        }
+                      },
+                      "required": [
+                        "lat",
+                        "lng"
+                      ],
+                      "title": "Lat Location"
+                    },
+                    "lineupLinks": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "title": "Lineup Links"
+                    }
+                  },
+                  "required": [
+                    "label",
+                    "lineupLinks"
+                  ]
+                },
+                "title": "Attraction"
+              }
+            },
+            "required": [
+              "label",
+              "venue",
+              "referenceDate",
+              "attraction"
+            ]
+          },
+          "title": "Days"
+        }
+      },
+      "required": [
+        "days"
+      ],
+      "title": "Programacao"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvTmV4dEF0dHJhY3Rpb25zLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "programacao": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvY29uZmlnc3Nhb2pvYW8vUHJvZ3JhbWFjYW8udHM=@Programacao",
+          "title": "Programacao"
+        }
+      },
+      "required": [
+        "programacao"
+      ],
+      "title": "deco-sites/pphoje/sections/NextAttractions.tsx@Props"
+    },
     "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRGF0ZS50cw==@Props": {
       "type": "object",
       "properties": {
@@ -1095,6 +1491,36 @@
       "required": [],
       "title": "deco-cx/live/matchers/MatchDate.ts@Props"
     },
+    "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRGV2aWNlLnRz@Props": {
+      "type": "object",
+      "properties": {
+        "devices": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "const": "mobile"
+              },
+              {
+                "type": "string",
+                "const": "tablet"
+              },
+              {
+                "type": "string",
+                "const": "desktop"
+              }
+            ],
+            "type": "string"
+          },
+          "title": "Devices"
+        }
+      },
+      "required": [
+        "devices"
+      ],
+      "title": "deco-cx/live/matchers/MatchDevice.ts@Props"
+    },
     "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRW52aXJvbm1lbnQudHM=@Props": {
       "type": "object",
       "properties": {
@@ -1117,6 +1543,27 @@
         "environment"
       ],
       "title": "deco-cx/live/matchers/MatchEnvironment.ts@Props"
+    },
+    "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoSG9zdC50cw==@Props": {
+      "type": "object",
+      "properties": {
+        "includes": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Includes"
+        },
+        "match": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Match"
+        }
+      },
+      "required": [],
+      "title": "deco-cx/live/matchers/MatchHost.ts@Props"
     },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9tYXRjaGVyLnRz@Matcher": {
       "$ref": "#/root/matchers",
@@ -1156,27 +1603,6 @@
         "matchers"
       ],
       "title": "deco-cx/live/matchers/MatchMulti.ts@Props"
-    },
-    "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoT3JpZ2luLnRz@Props": {
-      "type": "object",
-      "properties": {
-        "includes": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Includes"
-        },
-        "match": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Match"
-        }
-      },
-      "required": [],
-      "title": "deco-cx/live/matchers/MatchOrigin.ts@Props"
     },
     "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoUmFuZG9tLnRz@Props": {
       "type": "object",
@@ -1225,6 +1651,31 @@
       "required": [],
       "title": "deco-cx/live/matchers/MatchUserAgent.ts@Props"
     },
+    "ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Override": {
+      "type": "object",
+      "properties": {
+        "use": {
+          "type": "string",
+          "title": "Use"
+        },
+        "insteadOf": {
+          "type": "string",
+          "title": "Instead Of"
+        }
+      },
+      "required": [
+        "use",
+        "insteadOf"
+      ],
+      "title": "Override"
+    },
+    "ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Override[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Override"
+      },
+      "title": "Override[]"
+    },
     "ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Audience": {
       "type": "object",
       "properties": {
@@ -1234,24 +1685,24 @@
         },
         "name": {
           "type": "string",
-          "title": "Name"
+          "title": "The audience name (will be used on cookies).",
+          "description": "Add a meaningful short word for the audience name.",
+          "maxLength": 22,
+          "minLength": 3,
+          "pattern": "^[A-Za-z0-9_]+$"
         },
         "routes": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler@record",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route[]",
           "title": "Routes"
         },
         "overrides": {
-          "title": "Overrides",
-          "type": "object",
-          "additionalProperties": {
-            "type": "string"
-          }
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Override[]",
+          "title": "Overrides"
         }
       },
       "required": [
         "matcher",
-        "name",
-        "routes"
+        "name"
       ],
       "title": "deco-cx/live/flags/audience.ts@Audience"
     },
@@ -1259,19 +1710,147 @@
       "type": "object",
       "properties": {
         "routes": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler@record",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route[]",
           "title": "Routes"
         },
         "overrides": {
-          "title": "Overrides",
-          "type": "object",
-          "additionalProperties": {
-            "type": "string"
-          }
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Override[]",
+          "title": "Overrides"
         }
       },
       "required": [],
       "title": "deco-cx/live/flags/everyone.ts@EveryoneConfig"
+    },
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL2NhbmNlbC50cw==@Props": {
+      "type": "object",
+      "properties": {
+        "executionId": {
+          "type": "string",
+          "title": "Execution Id"
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Reason"
+        }
+      },
+      "required": [
+        "executionId"
+      ],
+      "title": "deco-cx/live/actions/workflows/cancel.ts@Props"
+    },
+    "ZGVjby1jeC9kdXJhYmxlL2hhbmRsZXIudHM=@RunRequest": {
+      "type": "object",
+      "properties": {
+        "results": {
+          "title": "Results"
+        },
+        "executionId": {
+          "type": "string",
+          "title": "Execution Id"
+        },
+        "metadata": {
+          "title": "Metadata"
+        }
+      },
+      "required": [
+        "results",
+        "executionId",
+        "metadata"
+      ],
+      "title": "deco-cx/durable/handler.ts@RunRequest"
+    },
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3NpZ25hbC50cw==@Props": {
+      "type": "object",
+      "properties": {
+        "signal": {
+          "type": "string",
+          "title": "Signal"
+        },
+        "executionId": {
+          "type": "string",
+          "title": "Execution Id"
+        },
+        "payload": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "title": "Payload"
+        }
+      },
+      "required": [
+        "signal",
+        "executionId"
+      ],
+      "title": "deco-cx/live/actions/workflows/signal.ts@Props"
+    },
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "title": "Key"
+        },
+        "props": {
+          "type": "object",
+          "title": "Props"
+        }
+      },
+      "required": [
+        "key",
+        "props"
+      ],
+      "title": "WorkflowRef"
+    },
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|c5736bd0170c3df7f76fac29183c2204": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "ref": {
+              "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy93b3JrZmxvdy50cw==@Workflow",
+              "title": "Ref"
+            }
+          },
+          "required": [
+            "ref"
+          ]
+        }
+      ],
+      "title": "WorkflowRef|c5736bd0170c3df7f76fac29183c2204"
+    },
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
+      "type": "object",
+      "properties": {
+        "workflow": {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|c5736bd0170c3df7f76fac29183c2204",
+          "title": "Workflow"
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Id"
+        },
+        "args": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          },
+          "title": "Args"
+        }
+      },
+      "required": [
+        "workflow"
+      ],
+      "title": "deco-cx/live/actions/workflows/start.ts@Props"
     },
     "ZGVjby1zaXRlcy9wcGhvamUvZnVuY3Rpb25zL0xvYWRHaXRIdWJSYXcudHM=": {
       "title": "GitHub Raw Loader",
@@ -1292,6 +1871,50 @@
             "deco-sites/pphoje/functions/LoadGitHubRaw.ts"
           ],
           "default": "deco-sites/pphoje/functions/LoadGitHubRaw.ts"
+        }
+      }
+    },
+    "JGxpdmUvbG9hZGVycy93b3JrZmxvd3MvZXZlbnRzLnRz": {
+      "title": "$live/loaders/workflows/events.ts",
+      "description": "Get the workflow execution events.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2xvYWRlcnMvd29ya2Zsb3dzL2V2ZW50cy50cw==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "$live/loaders/workflows/events.ts"
+          ],
+          "default": "$live/loaders/workflows/events.ts"
+        }
+      }
+    },
+    "JGxpdmUvbG9hZGVycy93b3JrZmxvd3MvZ2V0LnRz": {
+      "title": "$live/loaders/workflows/get.ts",
+      "description": "Read the workflow execution information.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2xvYWRlcnMvd29ya2Zsb3dzL2dldC50cw==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "$live/loaders/workflows/get.ts"
+          ],
+          "default": "$live/loaders/workflows/get.ts"
         }
       }
     },
@@ -1439,7 +2062,8 @@
       }
     },
     "JGxpdmUvaGFuZGxlcnMvZGV2UGFnZS50cw==": {
-      "title": "$live/handlers/devPage.ts",
+      "title": "Private Fresh Page",
+      "description": "Useful for pages under development.",
       "type": "object",
       "allOf": [
         {
@@ -1460,7 +2084,8 @@
       }
     },
     "JGxpdmUvaGFuZGxlcnMvZnJlc2gudHM=": {
-      "title": "$live/handlers/fresh.ts",
+      "title": "Fresh Page",
+      "description": "Renders a fresh page.",
       "type": "object",
       "allOf": [
         {
@@ -1481,7 +2106,8 @@
       }
     },
     "JGxpdmUvaGFuZGxlcnMvcHJveHkudHM=": {
-      "title": "$live/handlers/proxy.ts",
+      "title": "Proxy Handler",
+      "description": "Proxies request to the target url.",
       "type": "object",
       "allOf": [
         {
@@ -1498,6 +2124,27 @@
             "$live/handlers/proxy.ts"
           ],
           "default": "$live/handlers/proxy.ts"
+        }
+      }
+    },
+    "JGxpdmUvaGFuZGxlcnMvcmVkaXJlY3QudHM=": {
+      "title": "$live/handlers/redirect.ts",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2hhbmRsZXJzL3JlZGlyZWN0LnRz@RedirectConfig"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "$live/handlers/redirect.ts"
+          ],
+          "default": "$live/handlers/redirect.ts"
         }
       }
     },
@@ -1523,7 +2170,8 @@
       }
     },
     "JGxpdmUvaGFuZGxlcnMvcm91dGVzU2VsZWN0aW9uLnRz": {
-      "title": "$live/handlers/routesSelection.ts",
+      "title": "Routes Selection",
+      "description": "Select routes based on the target audience.",
       "type": "object",
       "allOf": [
         {
@@ -1540,6 +2188,27 @@
             "$live/handlers/routesSelection.ts"
           ],
           "default": "$live/handlers/routesSelection.ts"
+        }
+      }
+    },
+    "JGxpdmUvaGFuZGxlcnMvd29ya2Zsb3dSdW5uZXIudHM=": {
+      "title": "$live/handlers/workflowRunner.ts",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2hhbmRsZXJzL3dvcmtmbG93UnVubmVyLnRz@Config"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "$live/handlers/workflowRunner.ts"
+          ],
+          "default": "$live/handlers/workflowRunner.ts"
         }
       }
     },
@@ -1785,6 +2454,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvTmV4dEF0dHJhY3Rpb25zLnRzeA==": {
+      "title": "deco-sites/pphoje/sections/NextAttractions.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvTmV4dEF0dHJhY3Rpb25zLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/pphoje/sections/NextAttractions.tsx"
+          ],
+          "default": "deco-sites/pphoje/sections/NextAttractions.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvU2hhcmVMb2NhbC50c3g=": {
       "title": "deco-sites/pphoje/sections/ShareLocal.tsx",
       "type": "object",
@@ -1838,6 +2528,28 @@
         }
       }
     },
+    "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hEZXZpY2UudHM=": {
+      "title": "Device Matcher",
+      "description": "Matches the user based on the used device, options are: mobile, desktop or tablet.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRGV2aWNlLnRz@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "$live/matchers/MatchDevice.ts"
+          ],
+          "default": "$live/matchers/MatchDevice.ts"
+        }
+      }
+    },
     "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hFbnZpcm9ubWVudC50cw==": {
       "title": "$live/matchers/MatchEnvironment.ts",
       "type": "object",
@@ -1859,6 +2571,27 @@
         }
       }
     },
+    "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hIb3N0LnRz": {
+      "title": "$live/matchers/MatchHost.ts",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoSG9zdC50cw==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "$live/matchers/MatchHost.ts"
+          ],
+          "default": "$live/matchers/MatchHost.ts"
+        }
+      }
+    },
     "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hNdWx0aS50cw==": {
       "title": "$live/matchers/MatchMulti.ts",
       "type": "object",
@@ -1877,27 +2610,6 @@
             "$live/matchers/MatchMulti.ts"
           ],
           "default": "$live/matchers/MatchMulti.ts"
-        }
-      }
-    },
-    "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hPcmlnaW4udHM=": {
-      "title": "$live/matchers/MatchOrigin.ts",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoT3JpZ2luLnRz@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "$live/matchers/MatchOrigin.ts"
-          ],
-          "default": "$live/matchers/MatchOrigin.ts"
         }
       }
     },
@@ -1965,7 +2677,8 @@
       }
     },
     "JGxpdmUvZmxhZ3MvYXVkaWVuY2UudHM=": {
-      "title": "$live/flags/audience.ts",
+      "title": "Audience",
+      "description": "Select routes based on the matched audience.",
       "type": "object",
       "allOf": [
         {
@@ -1986,7 +2699,8 @@
       }
     },
     "JGxpdmUvZmxhZ3MvZXZlcnlvbmUudHM=": {
-      "title": "$live/flags/everyone.ts",
+      "title": "Audience Everyone",
+      "description": "Always match regardless of the current user",
       "type": "object",
       "allOf": [
         {
@@ -2003,6 +2717,115 @@
             "$live/flags/everyone.ts"
           ],
           "default": "$live/flags/everyone.ts"
+        }
+      }
+    },
+    "JGxpdmUvYWN0aW9ucy93b3JrZmxvd3MvY2FuY2VsLnRz": {
+      "title": "$live/actions/workflows/cancel.ts",
+      "description": "Cancels the workflow execution, you can, optionally, add a reason of the cancellation.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL2NhbmNlbC50cw==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "$live/actions/workflows/cancel.ts"
+          ],
+          "default": "$live/actions/workflows/cancel.ts"
+        }
+      }
+    },
+    "JGxpdmUvYWN0aW9ucy93b3JrZmxvd3MvcnVuLnRz": {
+      "title": "$live/actions/workflows/run.ts",
+      "description": "Proceed the workflow execution based on the current state of the workflow.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9kdXJhYmxlL2hhbmRsZXIudHM=@RunRequest"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "$live/actions/workflows/run.ts"
+          ],
+          "default": "$live/actions/workflows/run.ts"
+        }
+      }
+    },
+    "JGxpdmUvYWN0aW9ucy93b3JrZmxvd3Mvc2lnbmFsLnRz": {
+      "title": "$live/actions/workflows/signal.ts",
+      "description": "Sends a signal to the workflow using the specified payload.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3NpZ25hbC50cw==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "$live/actions/workflows/signal.ts"
+          ],
+          "default": "$live/actions/workflows/signal.ts"
+        }
+      }
+    },
+    "JGxpdmUvYWN0aW9ucy93b3JrZmxvd3Mvc3RhcnQudHM=": {
+      "title": "$live/actions/workflows/start.ts",
+      "description": "Start the workflow execution with the given props and args. You can set the id of the workflow as you wish.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "$live/actions/workflows/start.ts"
+          ],
+          "default": "$live/actions/workflows/start.ts"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvY29uZmlnc3Nhb2pvYW8vUHJvZ3JhbWFjYW8udHM=": {
+      "title": "deco-sites/pphoje/configssaojoao/Programacao.ts",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvY29uZmlnc3Nhb2pvYW8vUHJvZ3JhbWFjYW8udHM=@Programacao"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/pphoje/configssaojoao/Programacao.ts"
+          ],
+          "default": "deco-sites/pphoje/configssaojoao/Programacao.ts"
         }
       }
     },
@@ -2023,21 +2846,6 @@
       ],
       "title": "deco-cx/live/routes/_middleware.ts@MiddlewareConfig",
       "description": "Global configurations for ./routes/_middleware.ts route"
-    },
-    "ZGVjby1jeC9saXZlL3JvdXRlcy9bLi4uY2F0Y2hhbGxdLnRzeA==@Entrypoint": {
-      "type": "object",
-      "properties": {
-        "handler": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler",
-          "description": "configure how to handle requests.",
-          "title": "Handler"
-        }
-      },
-      "required": [
-        "handler"
-      ],
-      "title": "deco-cx/live/routes/[...catchall].tsx@Entrypoint",
-      "description": "Site entrypoint, configure your audiences and routes."
     }
   },
   "root": {
@@ -2051,6 +2859,28 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvZnVuY3Rpb25zL0xvYWRHaXRIdWJSYXcudHM="
         }
       ]
+    },
+    "accounts": {
+      "title": "accounts",
+      "anyOf": []
+    },
+    "loaders": {
+      "title": "loaders",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "$ref": "#/definitions/JGxpdmUvbG9hZGVycy93b3JrZmxvd3MvZXZlbnRzLnRz"
+        },
+        {
+          "$ref": "#/definitions/JGxpdmUvbG9hZGVycy93b3JrZmxvd3MvZ2V0LnRz"
+        }
+      ]
+    },
+    "routes": {
+      "title": "routes",
+      "anyOf": []
     },
     "islands": {
       "title": "islands",
@@ -2100,10 +2930,16 @@
           "$ref": "#/definitions/JGxpdmUvaGFuZGxlcnMvcHJveHkudHM="
         },
         {
+          "$ref": "#/definitions/JGxpdmUvaGFuZGxlcnMvcmVkaXJlY3QudHM="
+        },
+        {
           "$ref": "#/definitions/JGxpdmUvaGFuZGxlcnMvcm91dGVyLnRz"
         },
         {
           "$ref": "#/definitions/JGxpdmUvaGFuZGxlcnMvcm91dGVzU2VsZWN0aW9uLnRz"
+        },
+        {
+          "$ref": "#/definitions/JGxpdmUvaGFuZGxlcnMvd29ya2Zsb3dSdW5uZXIudHM="
         }
       ]
     },
@@ -2158,6 +2994,9 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvTGluZVVwTmFtZXMudHN4"
         },
         {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvTmV4dEF0dHJhY3Rpb25zLnRzeA=="
+        },
+        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvU2hhcmVMb2NhbC50c3g="
         }
       ]
@@ -2175,13 +3014,16 @@
           "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hEYXRlLnRz"
         },
         {
+          "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hEZXZpY2UudHM="
+        },
+        {
           "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hFbnZpcm9ubWVudC50cw=="
         },
         {
-          "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hNdWx0aS50cw=="
+          "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hIb3N0LnRz"
         },
         {
-          "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hPcmlnaW4udHM="
+          "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hNdWx0aS50cw=="
         },
         {
           "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hSYW5kb20udHM="
@@ -2208,6 +3050,41 @@
         }
       ]
     },
+    "actions": {
+      "title": "actions",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "$ref": "#/definitions/JGxpdmUvYWN0aW9ucy93b3JrZmxvd3MvY2FuY2VsLnRz"
+        },
+        {
+          "$ref": "#/definitions/JGxpdmUvYWN0aW9ucy93b3JrZmxvd3MvcnVuLnRz"
+        },
+        {
+          "$ref": "#/definitions/JGxpdmUvYWN0aW9ucy93b3JrZmxvd3Mvc2lnbmFsLnRz"
+        },
+        {
+          "$ref": "#/definitions/JGxpdmUvYWN0aW9ucy93b3JrZmxvd3Mvc3RhcnQudHM="
+        }
+      ]
+    },
+    "workflows": {
+      "title": "workflows",
+      "anyOf": []
+    },
+    "configssaojoao": {
+      "title": "configssaojoao",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvY29uZmlnc3Nhb2pvYW8vUHJvZ3JhbWFjYW8udHM="
+        }
+      ]
+    },
     "entrypoint": {
       "type": "object",
       "required": [
@@ -2226,14 +3103,14 @@
         "./routes/[...catchall].tsx": {
           "anyOf": [
             {
-              "$ref": "#/definitions/ZGVjby1jeC9saXZlL3JvdXRlcy9bLi4uY2F0Y2hhbGxdLnRzeA==@Entrypoint"
+              "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler"
             }
           ]
         },
         "./routes/index.tsx": {
           "anyOf": [
             {
-              "$ref": "#/definitions/ZGVjby1jeC9saXZlL3JvdXRlcy9bLi4uY2F0Y2hhbGxdLnRzeA==@Entrypoint"
+              "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler"
             }
           ]
         }
@@ -2249,6 +3126,15 @@
         "anyOf": [
           {
             "$ref": "#/root/functions"
+          },
+          {
+            "$ref": "#/root/accounts"
+          },
+          {
+            "$ref": "#/root/loaders"
+          },
+          {
+            "$ref": "#/root/routes"
           },
           {
             "$ref": "#/root/islands"
@@ -2267,6 +3153,15 @@
           },
           {
             "$ref": "#/root/flags"
+          },
+          {
+            "$ref": "#/root/actions"
+          },
+          {
+            "$ref": "#/root/workflows"
+          },
+          {
+            "$ref": "#/root/configssaojoao"
           }
         ]
       }
