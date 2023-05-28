@@ -11,19 +11,20 @@ import * as $$$$$0 from "./islands/BackToTop.tsx";
 import * as $$$$$1 from "./islands/HashLink.tsx";
 import * as $$$$$2 from "./islands/HeaderButton.tsx";
 import * as $$$$$3 from "./islands/HeaderResponsive.tsx";
-import * as $$$$$4 from "./islands/Maps.tsx";
-import * as $$$$$5 from "./islands/Modal.tsx";
+import * as $$$$$4 from "./islands/LineUpIsland.tsx";
+import * as $$$$$5 from "./islands/Maps.tsx";
 import * as $$$$$6 from "./islands/Programacao.tsx";
-import * as $$$$$$$$0 from "./sections/Festas.tsx";
-import * as $$$$$$$$1 from "./sections/Head.tsx";
-import * as $$$$$$$$2 from "./sections/Header.tsx";
-import * as $$$$$$$$3 from "./sections/Home.tsx";
-import * as $$$$$$$$4 from "./sections/Intro.tsx";
-import * as $$$$$$$$5 from "./sections/lineUp.tsx";
-import * as $$$$$$$$6 from "./sections/LineUpNames.tsx";
-import * as $$$$$$$$7 from "./sections/NextAttractions.tsx";
-import * as $$$$$$$$8 from "./sections/ShareLocal.tsx";
-import * as $$$$$$$$9 from "./sections/Welcome.tsx";
+import * as $$$$$$$$0 from "./sections/DesignSystem.tsx";
+import * as $$$$$$$$1 from "./sections/Festas.tsx";
+import * as $$$$$$$$2 from "./sections/Head.tsx";
+import * as $$$$$$$$3 from "./sections/Header.tsx";
+import * as $$$$$$$$4 from "./sections/Home.tsx";
+import * as $$$$$$$$5 from "./sections/Intro.tsx";
+import * as $$$$$$$$6 from "./sections/lineUp.tsx";
+import * as $$$$$$$$7 from "./sections/LineUpNames.tsx";
+import * as $$$$$$$$8 from "./sections/NextAttractions.tsx";
+import * as $$$$$$$$9 from "./sections/ShareLocal.tsx";
+import * as $$$$$$$$10 from "./sections/Welcome.tsx";
 import * as $$$$$$$$$$$$$0 from "./configssaojoao/Programacao.ts";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
@@ -186,24 +187,25 @@ const manifest = {
     "./islands/HashLink.tsx": $$$$$1,
     "./islands/HeaderButton.tsx": $$$$$2,
     "./islands/HeaderResponsive.tsx": $$$$$3,
-    "./islands/Maps.tsx": $$$$$4,
-    "./islands/Modal.tsx": $$$$$5,
+    "./islands/LineUpIsland.tsx": $$$$$4,
+    "./islands/Maps.tsx": $$$$$5,
     "./islands/Programacao.tsx": $$$$$6,
   },
   "sections": {
     "$live/sections/PageInclude.tsx": i2$$$$0,
     "$live/sections/Slot.tsx": i2$$$$1,
     "$live/sections/UseSlot.tsx": i2$$$$2,
-    "deco-sites/pphoje/sections/Festas.tsx": $$$$$$$$0,
-    "deco-sites/pphoje/sections/Head.tsx": $$$$$$$$1,
-    "deco-sites/pphoje/sections/Header.tsx": $$$$$$$$2,
-    "deco-sites/pphoje/sections/Home.tsx": $$$$$$$$3,
-    "deco-sites/pphoje/sections/Intro.tsx": $$$$$$$$4,
-    "deco-sites/pphoje/sections/lineUp.tsx": $$$$$$$$5,
-    "deco-sites/pphoje/sections/LineUpNames.tsx": $$$$$$$$6,
-    "deco-sites/pphoje/sections/NextAttractions.tsx": $$$$$$$$7,
-    "deco-sites/pphoje/sections/ShareLocal.tsx": $$$$$$$$8,
-    "deco-sites/pphoje/sections/Welcome.tsx": $$$$$$$$9,
+    "deco-sites/pphoje/sections/DesignSystem.tsx": $$$$$$$$0,
+    "deco-sites/pphoje/sections/Festas.tsx": $$$$$$$$1,
+    "deco-sites/pphoje/sections/Head.tsx": $$$$$$$$2,
+    "deco-sites/pphoje/sections/Header.tsx": $$$$$$$$3,
+    "deco-sites/pphoje/sections/Home.tsx": $$$$$$$$4,
+    "deco-sites/pphoje/sections/Intro.tsx": $$$$$$$$5,
+    "deco-sites/pphoje/sections/lineUp.tsx": $$$$$$$$6,
+    "deco-sites/pphoje/sections/LineUpNames.tsx": $$$$$$$$7,
+    "deco-sites/pphoje/sections/NextAttractions.tsx": $$$$$$$$8,
+    "deco-sites/pphoje/sections/ShareLocal.tsx": $$$$$$$$9,
+    "deco-sites/pphoje/sections/Welcome.tsx": $$$$$$$$10,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$3,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$4,
     "deco-sites/std/sections/configOCC.global.tsx": i2$$$$5,

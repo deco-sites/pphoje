@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Programacao } from '../../configssaojoao/Programacao.ts'
 
 export interface Props{
