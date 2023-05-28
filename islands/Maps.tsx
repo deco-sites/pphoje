@@ -13,7 +13,8 @@ function Maps() {
     const data: LocationData = {
       latitude: position.coords.latitude,
       longitude: position.coords.longitude,
-      link: `https://www.google.com/maps?q=${position.coords.latitude},${position.coords.longitude}`,
+      link:
+        `https://www.google.com/maps?q=${position.coords.latitude},${position.coords.longitude}`,
     };
     console.log(data);
     setLocationData(data);
@@ -37,35 +38,38 @@ function Maps() {
 
   return (
     <div class="text-center px-2 py-2 flex flex-col gap-4">
-      {locationData ? (
-        <div>
-          <a href={locationData.link} target="_blank">
-            {locationData.link}
-          </a>
-          <button onClick={copyToClipboard}>Copiar</button>
-        </div>
-      ) : (
-        <div>
-          <div class="alert alert-info shadow-lg">
-            <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                class="stroke-current flex-shrink-0 w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                ></path>
-              </svg>
-              <span>New software update available.</span>
+      {locationData
+        ? (
+          <div>
+            <a href={locationData.link} target="_blank">
+              {locationData.link}
+            </a>
+            <button onClick={copyToClipboard}>Copiar</button>
+          </div>
+        )
+        : (
+          <div>
+            <div class="alert alert-info shadow-lg">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  class="stroke-current flex-shrink-0 w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  >
+                  </path>
+                </svg>
+                <span>New software update available.</span>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
     </div>
   );
 }
