@@ -53,7 +53,7 @@ function formatarData(data: string) {
   return [partes[2], ` de ${mes} `, partes[3] + ":" + partes[4]];
 }
 
-function Programacao({ festas }: Props) {
+function ProgramacaoCompleta({ festas }: Props) {
   const [hoveredIndex, setHoveredIndex] = useState(-1);
   const [selectedPerformer, setSelectedPerformer] = useState<IDay | undefined>(
     undefined,
@@ -199,4 +199,4 @@ function Programacao({ festas }: Props) {
   );
 }
 
-export default Programacao;
+export default ProgramacaoCompleta;
