@@ -12,7 +12,9 @@ export default {
         "card-name": "#120D26",
         "card-local": "#747688",
         "btn-label": "#6B21A8"
-        
+      },
+      fontWeight:{
+        "w-7": 700
       },
     },
     container: { center: true } 
