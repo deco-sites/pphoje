@@ -65,7 +65,7 @@
               "./islands/HeaderResponsive.tsx",
               "./islands/LineUpIsland.tsx",
               "./islands/Maps.tsx",
-              "./islands/Programacao.tsx",
+              "./islands/ProgramacaoCompleta.tsx",
               "$live/handlers/devPage.ts",
               "$live/handlers/fresh.ts",
               "$live/handlers/proxy.ts",
@@ -6787,88 +6787,133 @@
       ],
       "title": "deco-sites/pphoje/islands/LineUpIsland.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IDate": {
+    "ZGVjby1zaXRlcy9wcGhvamUvYmxvY2tzL2NvbmZpZ3Nhb2pvYW8udHM=@ConfigSaoJoao": {
       "type": "object",
-      "properties": {
-        "dia": {
-          "type": "string",
-          "format": "date-time",
-          "title": "Dia"
-        }
-      },
-      "required": [
-        "dia"
-      ],
-      "title": "IDate"
+      "properties": {},
+      "required": [],
+      "title": "ConfigSaoJoao"
     },
-    "ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IArtist": {
+    "ZGVjby1zaXRlcy9wcGhvamUvY29uZmlnc3Nhb2pvYW8vUHJvZ3JhbWFjYW8udHM=@Programacao": {
       "type": "object",
-      "properties": {
-        "name": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Name"
-        },
-        "bio": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Bio"
-        },
-        "socialMedia": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "title": "Social Media"
-        },
-        "showDateTime": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IDate",
-          "title": "Show Date Time"
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvYmxvY2tzL2NvbmZpZ3Nhb2pvYW8udHM=@ConfigSaoJoao"
         }
-      },
-      "required": [
-        "showDateTime"
       ],
-      "title": "IArtist"
-    },
-    "ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IDay": {
-      "type": "object",
       "properties": {
-        "date": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IDate",
-          "title": "Date"
-        },
-        "artists": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IArtist"
-          },
-          "title": "Artists"
-        }
-      },
-      "required": [
-        "date"
-      ],
-      "title": "IDay"
-    },
-    "ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IHouse": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Name"
-        },
         "days": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IDay"
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string",
+                "title": "Label"
+              },
+              "venue": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "const": "Parque do Povo"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Vila Forró"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Sitio São João"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Salão do Artesanato"
+                  }
+                ],
+                "type": "string",
+                "title": "Venue"
+              },
+              "referenceDate": {
+                "type": "string",
+                "title": "Reference Date"
+              },
+              "attraction": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "label": {
+                      "type": "string",
+                      "title": "Label"
+                    },
+                    "date": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "title": "Date"
+                    },
+                    "description": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "title": "Description"
+                    },
+                    "mobile": {
+                      "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+                      "title": "Mobile"
+                    },
+                    "desktop": {
+                      "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+                      "title": "Desktop"
+                    },
+                    "location": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "title": "Location"
+                    },
+                    "latLocation": {
+                      "type": "object",
+                      "properties": {
+                        "lat": {
+                          "type": "number",
+                          "title": "Lat"
+                        },
+                        "lng": {
+                          "type": "number",
+                          "title": "Lng"
+                        }
+                      },
+                      "required": [
+                        "lat",
+                        "lng"
+                      ],
+                      "title": "Lat Location"
+                    },
+                    "lineupLinks": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "title": "Lineup Links"
+                    }
+                  },
+                  "required": [
+                    "label",
+                    "lineupLinks"
+                  ]
+                },
+                "title": "Attraction"
+              }
+            },
+            "required": [
+              "label",
+              "venue",
+              "referenceDate",
+              "attraction"
+            ]
           },
           "title": "Days"
         }
@@ -6876,49 +6921,18 @@
       "required": [
         "days"
       ],
-      "title": "IHouse"
+      "title": "Programacao"
     },
-    "ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IParty": {
+    "ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhb0NvbXBsZXRhLnRzeA==@Props": {
       "type": "object",
       "properties": {
-        "id": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Id"
-        },
-        "name": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Name"
-        },
-        "houses": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IHouse"
-          },
-          "title": "Houses"
+        "programacao": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvY29uZmlnc3Nhb2pvYW8vUHJvZ3JhbWFjYW8udHM=@Programacao",
+          "title": "Programacao"
         }
       },
       "required": [],
-      "title": "IParty"
-    },
-    "ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@Props": {
-      "type": "object",
-      "properties": {
-        "festas": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IParty"
-          },
-          "title": "Festas"
-        }
-      },
-      "required": [],
-      "title": "deco-sites/pphoje/islands/Programacao.tsx@Props"
+      "title": "deco-sites/pphoje/islands/ProgramacaoCompleta.tsx@Props"
     },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page": {
       "$ref": "#/root/pages",
@@ -7449,7 +7463,7 @@
       "required": [],
       "title": "OptionalColors"
     },
-    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@9261f1c9bd901c824cb8756cacfc1f04&Colors": {
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors&dace44408f346bf0937ce15ad85150d1": {
       "allOf": [
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors"
@@ -7465,7 +7479,7 @@
           "required": []
         }
       ],
-      "title": "9261f1c9bd901c824cb8756cacfc1f04&Colors"
+      "title": "Colors&dace44408f346bf0937ce15ad85150d1"
     },
     "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Miscellaneous": {
       "type": "object",
@@ -7568,7 +7582,7 @@
       "type": "object",
       "properties": {
         "colors": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@9261f1c9bd901c824cb8756cacfc1f04&Colors",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors&dace44408f346bf0937ce15ad85150d1",
           "title": "Colors"
         },
         "miscellaneous": {
@@ -7583,137 +7597,17 @@
       "required": [],
       "title": "deco-sites/pphoje/sections/DesignSystem.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@IDate": {
-      "type": "object",
-      "properties": {
-        "dia": {
-          "type": "string",
-          "format": "date-time",
-          "title": "Dia"
-        }
-      },
-      "required": [
-        "dia"
-      ],
-      "title": "IDate"
-    },
-    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@IArtist": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Name"
-        },
-        "bio": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Bio"
-        },
-        "socialMedia": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "title": "Social Media"
-        },
-        "showDateTime": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@IDate",
-          "title": "Show Date Time"
-        }
-      },
-      "required": [
-        "showDateTime"
-      ],
-      "title": "IArtist"
-    },
-    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@IDay": {
-      "type": "object",
-      "properties": {
-        "date": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@IDate",
-          "title": "Date"
-        },
-        "artists": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@IArtist"
-          },
-          "title": "Artists"
-        }
-      },
-      "required": [
-        "date"
-      ],
-      "title": "IDay"
-    },
-    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@IHouse": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Name"
-        },
-        "days": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@IDay"
-          },
-          "title": "Days"
-        }
-      },
-      "required": [
-        "days"
-      ],
-      "title": "IHouse"
-    },
-    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@IParty": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Id"
-        },
-        "name": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Name"
-        },
-        "houses": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@IHouse"
-          },
-          "title": "Houses"
-        }
-      },
-      "required": [],
-      "title": "IParty"
-    },
     "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@Props": {
       "type": "object",
       "properties": {
-        "festas": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRmVzdGFzLnRzeA==@IParty"
-          },
-          "title": "Festas"
+        "programacao": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvY29uZmlnc3Nhb2pvYW8vUHJvZ3JhbWFjYW8udHM=@Programacao",
+          "title": "Programacao"
         }
       },
-      "required": [],
+      "required": [
+        "programacao"
+      ],
       "title": "deco-sites/pphoje/sections/Festas.tsx@Props"
     },
     "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSGVhZC50c3g=@Props": {
@@ -7853,142 +7747,6 @@
       },
       "required": [],
       "title": "deco-sites/pphoje/sections/Home.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy9wcGhvamUvYmxvY2tzL2NvbmZpZ3Nhb2pvYW8udHM=@ConfigSaoJoao": {
-      "type": "object",
-      "properties": {},
-      "required": [],
-      "title": "ConfigSaoJoao"
-    },
-    "ZGVjby1zaXRlcy9wcGhvamUvY29uZmlnc3Nhb2pvYW8vUHJvZ3JhbWFjYW8udHM=@Programacao": {
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvYmxvY2tzL2NvbmZpZ3Nhb2pvYW8udHM=@ConfigSaoJoao"
-        }
-      ],
-      "properties": {
-        "days": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "label": {
-                "type": "string",
-                "title": "Label"
-              },
-              "venue": {
-                "anyOf": [
-                  {
-                    "type": "string",
-                    "const": "Parque do Povo"
-                  },
-                  {
-                    "type": "string",
-                    "const": "Vila Forró"
-                  },
-                  {
-                    "type": "string",
-                    "const": "Sitio São João"
-                  },
-                  {
-                    "type": "string",
-                    "const": "Salão do Artesanato"
-                  }
-                ],
-                "type": "string",
-                "title": "Venue"
-              },
-              "referenceDate": {
-                "type": "string",
-                "title": "Reference Date"
-              },
-              "attraction": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "label": {
-                      "type": "string",
-                      "title": "Label"
-                    },
-                    "date": {
-                      "type": [
-                        "string",
-                        "null"
-                      ],
-                      "title": "Date"
-                    },
-                    "description": {
-                      "type": [
-                        "string",
-                        "null"
-                      ],
-                      "title": "Description"
-                    },
-                    "mobile": {
-                      "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-                      "title": "Mobile"
-                    },
-                    "desktop": {
-                      "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-                      "title": "Desktop"
-                    },
-                    "location": {
-                      "type": [
-                        "string",
-                        "null"
-                      ],
-                      "title": "Location"
-                    },
-                    "latLocation": {
-                      "type": "object",
-                      "properties": {
-                        "lat": {
-                          "type": "number",
-                          "title": "Lat"
-                        },
-                        "lng": {
-                          "type": "number",
-                          "title": "Lng"
-                        }
-                      },
-                      "required": [
-                        "lat",
-                        "lng"
-                      ],
-                      "title": "Lat Location"
-                    },
-                    "lineupLinks": {
-                      "type": "array",
-                      "items": {
-                        "type": "string"
-                      },
-                      "title": "Lineup Links"
-                    }
-                  },
-                  "required": [
-                    "label",
-                    "lineupLinks"
-                  ]
-                },
-                "title": "Attraction"
-              }
-            },
-            "required": [
-              "label",
-              "venue",
-              "referenceDate",
-              "attraction"
-            ]
-          },
-          "title": "Days"
-        }
-      },
-      "required": [
-        "days"
-      ],
-      "title": "Programacao"
     },
     "ZGVjby1zaXRlcy9wcGhvamUvY29uZmlnc3Nhb2pvYW8vUHJvZ3JhbWFjYW8udHM=@Programacao[]": {
       "type": "array",
@@ -10139,12 +9897,12 @@
         }
       }
     },
-    "Li9pc2xhbmRzL1Byb2dyYW1hY2FvLnRzeA==": {
-      "title": "./islands/Programacao.tsx",
+    "Li9pc2xhbmRzL1Byb2dyYW1hY2FvQ29tcGxldGEudHN4": {
+      "title": "./islands/ProgramacaoCompleta.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhb0NvbXBsZXRhLnRzeA==@Props"
         }
       ],
       "required": [
@@ -10154,9 +9912,9 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "./islands/Programacao.tsx"
+            "./islands/ProgramacaoCompleta.tsx"
           ],
-          "default": "./islands/Programacao.tsx"
+          "default": "./islands/ProgramacaoCompleta.tsx"
         }
       }
     },
@@ -11736,7 +11494,7 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL01hcHMudHN4"
         },
         {
-          "$ref": "#/definitions/Li9pc2xhbmRzL1Byb2dyYW1hY2FvLnRzeA=="
+          "$ref": "#/definitions/Li9pc2xhbmRzL1Byb2dyYW1hY2FvQ29tcGxldGEudHN4"
         }
       ]
     },
