@@ -1,5 +1,5 @@
-import PlusBtn from "../components/ui/icons/PlusBtn.tsx";
 import type { Programacao } from "../configssaojoao/Programacao.ts";
+import Card from "../components/ui/Card.tsx";
 import { useState } from "preact/hooks";
 
 export interface Props {
@@ -60,27 +60,23 @@ function ProgramacaoCompleta({ programacao }: Props) {
   }
 
   return (
-    <div id="search">
-      <div class="flex flex-row justify-center">
-        <span class="text-xl font-bold mt-4">Programação Completa</span>
-      </div>
+    <div className="flex flex-col items-center">
+      <span class="text-xl font-bold mt-4" id="search">
+        Programação Completa
+      </span>
 
-      <div class="flex flex-row justify-center">
-        <input
-          type="text"
-          class="input input-bordered w-11/12"
-          placeholder="Busque por artista ou dia"
-        />
-      </div>
-      <div class="flex flex-row justify-center">
-        <div
-          class="flex w-11/12 flex-col overflow-scroll scroll-smooth mt-4 rounded-3xl border h-[500px]"
-          style="box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.5), inset 0 -10px 10px -10px rgba(0, 0, 0, 0.5);"
-        >
-          {[1, 2, 3, 4].map((a) => (
-            <div>card</div>
-          ))}
-        </div>
+      <input
+        type="text"
+        class="input input-bordered w-11/12"
+        placeholder="Busque por artista ou dia"
+      />
+      <div
+        class="flex w-11/12 p-2 flex-col overflow-scroll scroll-smooth mt-4 rounded-3xl border h-[500px]"
+        style="box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.5), inset 0 -10px 10px -10px rgba(0, 0, 0, 0.5);"
+      >
+        {[1, 2, 3, 4].map((a) => (
+          <Card />
+        ))}
       </div>
     </div>
   );

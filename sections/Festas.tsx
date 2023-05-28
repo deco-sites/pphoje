@@ -1,17 +1,12 @@
-import type { Programacao } from "../configssaojoao/Programacao.ts"
-import ProgramacaoCompleta from "../islands/ProgramacaoCompleta.tsx"
-
+import type { Programacao } from "../configssaojoao/Programacao.ts";
+import ProgramacaoCompleta from "../islands/ProgramacaoCompleta.tsx";
 
 export interface Props {
-  programacao: Programacao
+  programacao: Programacao;
 }
 
 function Festas({ programacao }: Props) {
-  return (
-    <div>
-      <ProgramacaoCompleta programacao={programacao} />
-    </div>
-  );
+  return <ProgramacaoCompleta programacao={programacao} />;
 }
 
 export default Festas;
