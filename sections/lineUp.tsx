@@ -21,7 +21,7 @@ function lineUp({ performers }: LineUpProps) {
   return (
     <div>
       <BackToTop />
-      <LineUpIsland performers={performers} />
+      {/* <LineUpIsland performers={performers} /> */}
     </div>
   );
 }
