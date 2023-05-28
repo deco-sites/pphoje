@@ -60,7 +60,6 @@
               "deco-sites/std/loaders/vtex/user.ts",
               "deco-sites/std/loaders/vtex/wishlist.ts",
               "./islands/BackToTop.tsx",
-              "./islands/CountDays.tsx",
               "./islands/HashLink.tsx",
               "./islands/HeaderButton.tsx",
               "./islands/HeaderResponsive.tsx",
@@ -78,7 +77,6 @@
               "$live/sections/PageInclude.tsx",
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
-              "deco-sites/pphoje/sections/CountDown.tsx",
               "deco-sites/pphoje/sections/DesignSystem.tsx",
               "deco-sites/pphoje/sections/Festas.tsx",
               "deco-sites/pphoje/sections/Head.tsx",
@@ -89,6 +87,7 @@
               "deco-sites/pphoje/sections/LineUpNames.tsx",
               "deco-sites/pphoje/sections/NextAttractions.tsx",
               "deco-sites/pphoje/sections/ShareLocal.tsx",
+              "deco-sites/pphoje/sections/Welcome.tsx",
               "deco-sites/std/sections/Analytics.tsx",
               "deco-sites/std/sections/configButterCMS.global.tsx",
               "deco-sites/std/sections/configOCC.global.tsx",
@@ -7450,7 +7449,7 @@
       "required": [],
       "title": "OptionalColors"
     },
-    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors&dace44408f346bf0937ce15ad85150d1": {
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@9261f1c9bd901c824cb8756cacfc1f04&Colors": {
       "allOf": [
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors"
@@ -7466,7 +7465,7 @@
           "required": []
         }
       ],
-      "title": "Colors&dace44408f346bf0937ce15ad85150d1"
+      "title": "9261f1c9bd901c824cb8756cacfc1f04&Colors"
     },
     "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Miscellaneous": {
       "type": "object",
@@ -7569,7 +7568,7 @@
       "type": "object",
       "properties": {
         "colors": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors&dace44408f346bf0937ce15ad85150d1",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@9261f1c9bd901c824cb8756cacfc1f04&Colors",
           "title": "Colors"
         },
         "miscellaneous": {
@@ -7855,80 +7854,6 @@
       "required": [],
       "title": "deco-sites/pphoje/sections/Home.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSW50cm8udHN4@IDate": {
-      "type": "object",
-      "properties": {
-        "dia": {
-          "type": "string",
-          "format": "date-time",
-          "title": "Dia"
-        }
-      },
-      "required": [
-        "dia"
-      ],
-      "title": "IDate"
-    },
-    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSW50cm8udHN4@Artist": {
-      "type": "object",
-      "properties": {
-        "mobile": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-          "title": "Mobile"
-        },
-        "name": {
-          "type": "string",
-          "title": "Name"
-        },
-        "bio": {
-          "type": "string",
-          "title": "Bio"
-        },
-        "date": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSW50cm8udHN4@IDate",
-          "title": "Date"
-        }
-      },
-      "required": [
-        "name",
-        "bio",
-        "date"
-      ],
-      "title": "Artist"
-    },
-    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSW50cm8udHN4@Artist[]": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSW50cm8udHN4@Artist"
-      },
-      "title": "Artist[]"
-    },
-    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSW50cm8udHN4@Props": {
-      "type": "object",
-      "properties": {
-        "performers": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSW50cm8udHN4@Artist[]",
-          "title": "Performers"
-        }
-      },
-      "required": [
-        "performers"
-      ],
-      "title": "deco-sites/pphoje/sections/Intro.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvbGluZVVwLnRzeA==@LineUpProps": {
-      "type": "object",
-      "properties": {
-        "performers": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvbGluZVVwLnRzeA==@Artist[]",
-          "title": "Performers"
-        }
-      },
-      "required": [
-        "performers"
-      ],
-      "title": "deco-sites/pphoje/sections/lineUp.tsx@LineUpProps"
-    },
     "ZGVjby1zaXRlcy9wcGhvamUvYmxvY2tzL2NvbmZpZ3Nhb2pvYW8udHM=@ConfigSaoJoao": {
       "type": "object",
       "properties": {},
@@ -8001,6 +7926,14 @@
                       ],
                       "title": "Description"
                     },
+                    "mobile": {
+                      "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+                      "title": "Mobile"
+                    },
+                    "desktop": {
+                      "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+                      "title": "Desktop"
+                    },
                     "location": {
                       "type": [
                         "string",
@@ -8057,6 +7990,37 @@
       ],
       "title": "Programacao"
     },
+    "ZGVjby1zaXRlcy9wcGhvamUvY29uZmlnc3Nhb2pvYW8vUHJvZ3JhbWFjYW8udHM=@Programacao[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvY29uZmlnc3Nhb2pvYW8vUHJvZ3JhbWFjYW8udHM=@Programacao"
+      },
+      "title": "Programacao[]"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSW50cm8udHN4@Props": {
+      "type": "object",
+      "properties": {
+        "prog": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvY29uZmlnc3Nhb2pvYW8vUHJvZ3JhbWFjYW8udHM=@Programacao[]",
+          "title": "Prog"
+        }
+      },
+      "required": [],
+      "title": "deco-sites/pphoje/sections/Intro.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvbGluZVVwLnRzeA==@LineUpProps": {
+      "type": "object",
+      "properties": {
+        "performers": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvbGluZVVwLnRzeA==@Artist[]",
+          "title": "Performers"
+        }
+      },
+      "required": [
+        "performers"
+      ],
+      "title": "deco-sites/pphoje/sections/lineUp.tsx@LineUpProps"
+    },
     "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvTmV4dEF0dHJhY3Rpb25zLnRzeA==@Props": {
       "type": "object",
       "properties": {
@@ -8069,6 +8033,29 @@
         "programacao"
       ],
       "title": "deco-sites/pphoje/sections/NextAttractions.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvV2VsY29tZS50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "logo": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Logo"
+        },
+        "bgImage": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Bg Image"
+        },
+        "label": {
+          "type": "string",
+          "title": "Label"
+        }
+      },
+      "required": [
+        "logo",
+        "bgImage",
+        "label"
+      ],
+      "title": "deco-sites/pphoje/sections/Welcome.tsx@Props"
     },
     "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9BbmFseXRpY3MudHN4@Props": {
       "type": "object",
@@ -10062,22 +10049,6 @@
         }
       }
     },
-    "Li9pc2xhbmRzL0NvdW50RGF5cy50c3g=": {
-      "title": "./islands/CountDays.tsx",
-      "type": "object",
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "./islands/CountDays.tsx"
-          ],
-          "default": "./islands/CountDays.tsx"
-        }
-      }
-    },
     "Li9pc2xhbmRzL0hhc2hMaW5rLnRzeA==": {
       "title": "./islands/HashLink.tsx",
       "type": "object",
@@ -10424,22 +10395,6 @@
         }
       }
     },
-    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvQ291bnREb3duLnRzeA==": {
-      "title": "deco-sites/pphoje/sections/CountDown.tsx",
-      "type": "object",
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/pphoje/sections/CountDown.tsx"
-          ],
-          "default": "deco-sites/pphoje/sections/CountDown.tsx"
-        }
-      }
-    },
     "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==": {
       "title": "deco-sites/pphoje/sections/DesignSystem.tsx",
       "type": "object",
@@ -10637,6 +10592,27 @@
             "deco-sites/pphoje/sections/ShareLocal.tsx"
           ],
           "default": "deco-sites/pphoje/sections/ShareLocal.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvV2VsY29tZS50c3g=": {
+      "title": "deco-sites/pphoje/sections/Welcome.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvV2VsY29tZS50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/pphoje/sections/Welcome.tsx"
+          ],
+          "default": "deco-sites/pphoje/sections/Welcome.tsx"
         }
       }
     },
@@ -11745,9 +11721,6 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL0JhY2tUb1RvcC50c3g="
         },
         {
-          "$ref": "#/definitions/Li9pc2xhbmRzL0NvdW50RGF5cy50c3g="
-        },
-        {
           "$ref": "#/definitions/Li9pc2xhbmRzL0hhc2hMaW5rLnRzeA=="
         },
         {
@@ -11823,9 +11796,6 @@
           "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvVXNlU2xvdC50c3g="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvQ291bnREb3duLnRzeA=="
-        },
-        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA=="
         },
         {
@@ -11854,6 +11824,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvU2hhcmVMb2NhbC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvV2VsY29tZS50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvQW5hbHl0aWNzLnRzeA=="

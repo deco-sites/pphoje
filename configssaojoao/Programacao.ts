@@ -1,4 +1,5 @@
 import { ConfigSaoJoao } from "../blocks/configsaojoao.ts";
+import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 
 export interface Programacao extends ConfigSaoJoao {
   days: Array<{
@@ -8,14 +9,18 @@ export interface Programacao extends ConfigSaoJoao {
       | "Vila Forró"
       | "Sitio São João"
       | "Salão do Artesanato";
-    /** @format 'date' */
+    /** @format 'date-time' */
     referenceDate: string;
     attraction: Array<{
       label: string;
       // TODO: Figure out why isn't showing in the code
-      /** @format 'date' */
+      /**
+     * @format date-time
+     */
       date?: string;
       description?: string;
+      mobile?: LiveImage;
+      desktop?: LiveImage;
       location?: string;
       latLocation?: {
         lat: number;
