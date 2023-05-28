@@ -62,9 +62,9 @@ function ProgramacaoCompleta({ programacao }: Props) {
   return (
     <div id="search">
       <div class="flex flex-row justify-center">
-      <span class="text-xl font-bold">Programação Completa</span>
+        <span class="text-xl font-bold mt-4">Programação Completa</span>
       </div>
-      
+
       <div class="flex flex-row justify-center">
         <input
           type="text"
@@ -72,12 +72,16 @@ function ProgramacaoCompleta({ programacao }: Props) {
           placeholder="Busque por artista ou dia"
         />
       </div>
-      {programacao &&
-        programacao?.days.map((festa) => (
-          <div key={festa} class="mt-2">
-            teste
-          </div>
-        ))}
+      <div class="flex flex-row justify-center">
+        <div
+          class="flex w-11/12 flex-col overflow-scroll scroll-smooth mt-4 rounded-3xl border h-[500px]"
+          style="box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.5), inset 0 -10px 10px -10px rgba(0, 0, 0, 0.5);"
+        >
+          {[1, 2, 3, 4].map((a) => (
+            <div>card</div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
