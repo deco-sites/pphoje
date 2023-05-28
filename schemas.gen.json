@@ -64,8 +64,8 @@
               "./islands/HashLink.tsx",
               "./islands/HeaderButton.tsx",
               "./islands/HeaderResponsive.tsx",
+              "./islands/LineUpIsland.tsx",
               "./islands/Maps.tsx",
-              "./islands/Modal.tsx",
               "./islands/Programacao.tsx",
               "$live/handlers/devPage.ts",
               "$live/handlers/fresh.ts",
@@ -6709,135 +6709,19 @@
           "anyOf": [
             {
               "type": "string",
-              "const": "ChevronLeft"
+              "const": "twitter"
             },
             {
               "type": "string",
-              "const": "ChevronRight"
+              "const": "instagram"
             },
             {
               "type": "string",
-              "const": "ChevronUp"
+              "const": "spotify"
             },
             {
               "type": "string",
-              "const": "ChevronDown"
-            },
-            {
-              "type": "string",
-              "const": "QuestionMarkCircle"
-            },
-            {
-              "type": "string",
-              "const": "User"
-            },
-            {
-              "type": "string",
-              "const": "ShoppingCart"
-            },
-            {
-              "type": "string",
-              "const": "Bars3"
-            },
-            {
-              "type": "string",
-              "const": "Heart"
-            },
-            {
-              "type": "string",
-              "const": "MagnifyingGlass"
-            },
-            {
-              "type": "string",
-              "const": "XMark"
-            },
-            {
-              "type": "string",
-              "const": "Plus"
-            },
-            {
-              "type": "string",
-              "const": "Minus"
-            },
-            {
-              "type": "string",
-              "const": "MapPin"
-            },
-            {
-              "type": "string",
-              "const": "Phone"
-            },
-            {
-              "type": "string",
-              "const": "Elo"
-            },
-            {
-              "type": "string",
-              "const": "Mastercard"
-            },
-            {
-              "type": "string",
-              "const": "Visa"
-            },
-            {
-              "type": "string",
-              "const": "Pix"
-            },
-            {
-              "type": "string",
-              "const": "Logo"
-            },
-            {
-              "type": "string",
-              "const": "Facebook"
-            },
-            {
-              "type": "string",
-              "const": "Instagram"
-            },
-            {
-              "type": "string",
-              "const": "Tiktok"
-            },
-            {
-              "type": "string",
-              "const": "Truck"
-            },
-            {
-              "type": "string",
-              "const": "Discount"
-            },
-            {
-              "type": "string",
-              "const": "Return"
-            },
-            {
-              "type": "string",
-              "const": "CreditCard"
-            },
-            {
-              "type": "string",
-              "const": "Deco"
-            },
-            {
-              "type": "string",
-              "const": "Discord"
-            },
-            {
-              "type": "string",
-              "const": "Trash"
-            },
-            {
-              "type": "string",
-              "const": "FilterList"
-            },
-            {
-              "type": "string",
-              "const": "WhatsApp"
-            },
-            {
-              "type": "string",
-              "const": "ArrowsPointingOut"
+              "const": "site"
             }
           ],
           "type": "string",
@@ -6891,7 +6775,7 @@
       },
       "title": "Artist[]"
     },
-    "ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Nb2RhbC50c3g=@Props": {
+    "ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9MaW5lVXBJc2xhbmQudHN4@Props": {
       "type": "object",
       "properties": {
         "performers": {
@@ -6902,7 +6786,7 @@
       "required": [
         "performers"
       ],
-      "title": "deco-sites/pphoje/islands/Modal.tsx@Props"
+      "title": "deco-sites/pphoje/islands/LineUpIsland.tsx@Props"
     },
     "ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Qcm9ncmFtYWNhby50c3g=@IDate": {
       "type": "object",
@@ -10247,6 +10131,27 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0xpbmVVcElzbGFuZC50c3g=": {
+      "title": "./islands/LineUpIsland.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9MaW5lVXBJc2xhbmQudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/LineUpIsland.tsx"
+          ],
+          "default": "./islands/LineUpIsland.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL01hcHMudHN4": {
       "title": "./islands/Maps.tsx",
       "type": "object",
@@ -10260,27 +10165,6 @@
             "./islands/Maps.tsx"
           ],
           "default": "./islands/Maps.tsx"
-        }
-      }
-    },
-    "Li9pc2xhbmRzL01vZGFsLnRzeA==": {
-      "title": "./islands/Modal.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvaXNsYW5kcy9Nb2RhbC50c3g=@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "./islands/Modal.tsx"
-          ],
-          "default": "./islands/Modal.tsx"
         }
       }
     },
@@ -11873,10 +11757,10 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlclJlc3BvbnNpdmUudHN4"
         },
         {
-          "$ref": "#/definitions/Li9pc2xhbmRzL01hcHMudHN4"
+          "$ref": "#/definitions/Li9pc2xhbmRzL0xpbmVVcElzbGFuZC50c3g="
         },
         {
-          "$ref": "#/definitions/Li9pc2xhbmRzL01vZGFsLnRzeA=="
+          "$ref": "#/definitions/Li9pc2xhbmRzL01hcHMudHN4"
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL1Byb2dyYW1hY2FvLnRzeA=="
