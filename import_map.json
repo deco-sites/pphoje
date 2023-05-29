@@ -1,7 +1,7 @@
 {
   "imports": {
     "deco-sites/pphoje/": "./",
-    "$live/": "https://denopkg.com/deco-cx/live@67781f916826771987a793cd3188db34099525d5/",
+    "$live/": "https://denopkg.com/deco-cx/live@875524ff734c8352e7e947c75fdd656b9dd22883/",
     "deco-sites/start/": "./",
     "partytown/": "https://deno.land/x/partytown@0.2.1/",
     "$fresh/": "https://deno.land/x/fresh@1.1.5/",
@@ -15,10 +15,5 @@
     "std/": "https://deno.land/std@0.181.0/",
     "deco-sites/std/": "https://denopkg.com/deco-sites/std@1.9.9/",
     "daisyui": "npm:daisyui@2.51.6"
-  },
-  "scopes": {
-    "https://denopkg.com/deco-cx/live@67781f916826771987a793cd3188db34099525d5/": {
-      "$live/blocks/index.ts": "./blocks/index.ts"
-    }
   }
 }

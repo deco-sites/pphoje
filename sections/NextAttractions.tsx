@@ -1,4 +1,6 @@
-import type { Programacao } from "../configssaojoao/Programacao.ts";
+import type { Programacao } from "../loaders/Programacao.ts";
+
+export type { Programacao };
 
 export interface Props {
   programacao: Programacao;

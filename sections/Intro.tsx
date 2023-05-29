@@ -1,6 +1,6 @@
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 import Card  from '../components/ui/Card.tsx'
-import { Programacao } from '../configssaojoao/Programacao.ts'
+import { Programacao } from '../loaders/Programacao.ts'
 
 export interface Props{
   prog?: Programacao[];

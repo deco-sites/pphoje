@@ -5,6 +5,7 @@
 import config from "./deno.json" assert { type: "json" };
 import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./functions/LoadGitHubRaw.ts";
+import * as $$$0 from "./loaders/Programacao.ts";
 import * as $$$$0 from "./routes/styles.css.ts";
 import * as $$$$1 from "./routes/_app.tsx";
 import * as $$$$$0 from "./islands/BackToTop.tsx";
@@ -25,7 +26,6 @@ import * as $$$$$$$$7 from "./sections/ShareLocal.tsx";
 import * as $$$$$$$$8 from "./sections/Header.tsx";
 import * as $$$$$$$$9 from "./sections/lineUp.tsx";
 import * as $$$$$$$$10 from "./sections/Welcome.tsx";
-import * as $$$$$$$$$$$$$0 from "./configssaojoao/Programacao.ts";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -51,7 +51,6 @@ import * as i2$$$$1 from "$live/sections/Slot.tsx";
 import * as i2$$$$2 from "$live/sections/UseSlot.tsx";
 import * as i2$$$$$$$$0 from "$live/matchers/MatchAlways.ts";
 import * as i2$$$$$$$$1 from "$live/matchers/MatchDate.ts";
-import * as i1$$$$$2 from "$live/matchers/MatchDevice.ts";
 import * as i2$$$$$$$$2 from "$live/matchers/MatchEnvironment.ts";
 import * as i2$$$$$$$$3 from "$live/matchers/MatchHost.ts";
 import * as i2$$$$$$$$4 from "$live/matchers/MatchMulti.ts";
@@ -167,6 +166,25 @@ const manifest = {
     "deco-sites/std/functions/vtexSuggestions.ts": i2$25,
     "deco-sites/std/functions/vtexWishlist.ts": i2$26,
   },
+  "loaders": {
+    "$live/loaders/workflows/events.ts": i2$$$0,
+    "$live/loaders/workflows/get.ts": i2$$$1,
+    "deco-sites/pphoje/loaders/Programacao.ts": $$$0,
+    "deco-sites/std/loaders/vtex/cart.ts": i2$$$2,
+    "deco-sites/std/loaders/vtex/intelligentSearch/productDetailsPage.ts":
+      i2$$$3,
+    "deco-sites/std/loaders/vtex/intelligentSearch/productList.ts": i2$$$4,
+    "deco-sites/std/loaders/vtex/intelligentSearch/productListingPage.ts":
+      i2$$$5,
+    "deco-sites/std/loaders/vtex/intelligentSearch/suggestions.ts": i2$$$6,
+    "deco-sites/std/loaders/vtex/legacy/productDetailsPage.ts": i2$$$7,
+    "deco-sites/std/loaders/vtex/legacy/productList.ts": i2$$$8,
+    "deco-sites/std/loaders/vtex/legacy/productListingPage.ts": i2$$$9,
+    "deco-sites/std/loaders/vtex/legacy/relatedProductsLoader.ts": i2$$$10,
+    "deco-sites/std/loaders/vtex/navbar.ts": i2$$$11,
+    "deco-sites/std/loaders/vtex/user.ts": i2$$$12,
+    "deco-sites/std/loaders/vtex/wishlist.ts": i2$$$13,
+  },
   "routes": {
     "./routes/_app.tsx": $$$$1,
     "./routes/_middleware.ts": $live_middleware,
@@ -218,27 +236,6 @@ const manifest = {
     "deco-sites/std/sections/SEOPLP.tsx": i2$$$$12,
     "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx": i2$$$$13,
   },
-  "configssaojoao": {
-    "deco-sites/pphoje/configssaojoao/Programacao.ts": $$$$$$$$$$$$$0,
-  },
-  "loaders": {
-    "$live/loaders/workflows/events.ts": i2$$$0,
-    "$live/loaders/workflows/get.ts": i2$$$1,
-    "deco-sites/std/loaders/vtex/cart.ts": i2$$$2,
-    "deco-sites/std/loaders/vtex/intelligentSearch/productDetailsPage.ts":
-      i2$$$3,
-    "deco-sites/std/loaders/vtex/intelligentSearch/productList.ts": i2$$$4,
-    "deco-sites/std/loaders/vtex/intelligentSearch/productListingPage.ts":
-      i2$$$5,
-    "deco-sites/std/loaders/vtex/intelligentSearch/suggestions.ts": i2$$$6,
-    "deco-sites/std/loaders/vtex/legacy/productDetailsPage.ts": i2$$$7,
-    "deco-sites/std/loaders/vtex/legacy/productList.ts": i2$$$8,
-    "deco-sites/std/loaders/vtex/legacy/productListingPage.ts": i2$$$9,
-    "deco-sites/std/loaders/vtex/legacy/relatedProductsLoader.ts": i2$$$10,
-    "deco-sites/std/loaders/vtex/navbar.ts": i2$$$11,
-    "deco-sites/std/loaders/vtex/user.ts": i2$$$12,
-    "deco-sites/std/loaders/vtex/wishlist.ts": i2$$$13,
-  },
   "handlers": {
     "$live/handlers/devPage.ts": i2$$$$$$0,
     "$live/handlers/fresh.ts": i2$$$$$$1,
@@ -254,7 +251,6 @@ const manifest = {
   "matchers": {
     "$live/matchers/MatchAlways.ts": i2$$$$$$$$0,
     "$live/matchers/MatchDate.ts": i2$$$$$$$$1,
-    "$live/matchers/MatchDevice.ts": i1$$$$$2,
     "$live/matchers/MatchEnvironment.ts": i2$$$$$$$$2,
     "$live/matchers/MatchHost.ts": i2$$$$$$$$3,
     "$live/matchers/MatchMulti.ts": i2$$$$$$$$4,

@@ -1,4 +1,4 @@
-import { Programacao } from "../../configssaojoao/Programacao.ts";
+import { Programacao } from "../../loaders/Programacao.ts";
 
 export interface Props {
   label?: string;

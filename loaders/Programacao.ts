@@ -1,7 +1,6 @@
-import { ConfigSaoJoao } from "../blocks/configsaojoao.ts";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 
-export interface Programacao extends ConfigSaoJoao {
+export interface Programacao {
   days: Array<{
     label: string;
     venue:
@@ -15,8 +14,8 @@ export interface Programacao extends ConfigSaoJoao {
       label: string;
       // TODO: Figure out why isn't showing in the code
       /**
-     * @format date-time
-     */
+       * @format date-time
+       */
       date?: string;
       description?: string;
       mobile?: LiveImage;
@@ -31,8 +30,8 @@ export interface Programacao extends ConfigSaoJoao {
   }>;
 }
 
-function programacao(rel: Programacao): ConfigSaoJoao {
-  return rel;
+function loader(props: Pick<Programacao, 'days'>): Programacao {
+  return props;
 }
 
-export default programacao;
+export default loader;
