@@ -1,4 +1,6 @@
-import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
+import type { Artist } from "./Artist.ts";
+
+export type { Artist };
 
 export interface Programacao {
   days: Array<{
@@ -8,7 +10,7 @@ export interface Programacao {
       | "Vila Forró"
       | "Sitio São João"
       | "Salão do Artesanato";
-    /** @format 'date-time' */
+    /** @description Teste */
     referenceDate: string;
     attraction: Array<{
       label: string;
@@ -17,15 +19,12 @@ export interface Programacao {
        * @format date-time
        */
       date?: string;
-      description?: string;
-      mobile?: LiveImage;
-      desktop?: LiveImage;
+      artist?: Artist;
       location?: string;
       latLocation?: {
         lat: number;
         lng: number;
       };
-      lineupLinks: Array<string>;
     }>;
   }>;
 }

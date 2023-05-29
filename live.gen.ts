@@ -6,6 +6,7 @@ import config from "./deno.json" assert { type: "json" };
 import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$0 from "./loaders/Programacao.ts";
+import * as $$$1 from "./loaders/Artist.ts";
 import * as $$$$0 from "./routes/styles.css.ts";
 import * as $$$$1 from "./routes/_app.tsx";
 import * as $$$$$0 from "./islands/BackToTop.tsx";
@@ -169,6 +170,7 @@ const manifest = {
   "loaders": {
     "$live/loaders/workflows/events.ts": i2$$$0,
     "$live/loaders/workflows/get.ts": i2$$$1,
+    "deco-sites/pphoje/loaders/Artist.ts": $$$1,
     "deco-sites/pphoje/loaders/Programacao.ts": $$$0,
     "deco-sites/std/loaders/vtex/cart.ts": i2$$$2,
     "deco-sites/std/loaders/vtex/intelligentSearch/productDetailsPage.ts":
