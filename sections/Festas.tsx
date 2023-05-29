@@ -1,4 +1,4 @@
-import type { Programacao } from "../configssaojoao/Programacao.ts";
+import type { Programacao } from "../loaders/Programacao.ts";
 import ProgramacaoCompleta from "../islands/ProgramacaoCompleta.tsx";
 
 export interface Props {
