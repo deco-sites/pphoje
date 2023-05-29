@@ -28,7 +28,7 @@ function formatarData(data: string) {
 function ProgramacaoCompleta({ programacao }: Props) {
   const [hoveredIndex, setHoveredIndex] = useState(-1);
   const [selectedPerformer, setSelectedPerformer] = useState<any | undefined>(
-    undefined
+    undefined,
   );
   const [dialogShow, setDialogShow] = useState(false);
   const [busca, setBusca] = useState("");
@@ -74,9 +74,7 @@ function ProgramacaoCompleta({ programacao }: Props) {
         class="flex w-11/12 p-2 flex-col overflow-scroll scroll-smooth mt-4 rounded-3xl border h-[500px]"
         style="box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.5), inset 0 -10px 10px -10px rgba(0, 0, 0, 0.5);"
       >
-        {[1, 2, 3, 4].map((a) => (
-          <Card />
-        ))}
+        {[1, 2, 3, 4].map((a) => <Card />)}
       </div>
     </div>
   );

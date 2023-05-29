@@ -9,7 +9,7 @@ export interface Props {
 
 function LineUpIsland({ performers }: Props) {
   const [selectedPerformer, setSelectedPerformer] = useState<Artist | null>(
-    null
+    null,
   );
 
   const bestSingers = performers.slice(0, 3);
@@ -20,7 +20,7 @@ function LineUpIsland({ performers }: Props) {
     .slice(7)
     .filter((performer) => performer.desktop && performer.mobile);
   const withoutImage = performers.filter(
-    (performer) => !performer.desktop && !performer.mobile
+    (performer) => !performer.desktop && !performer.mobile,
   );
   return (
     <div class="md:max-w-[800px] md:mx-auto" id="lineUp">

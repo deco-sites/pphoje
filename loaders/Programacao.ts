@@ -30,7 +30,7 @@ export interface Programacao {
   }>;
 }
 
-function loader(props: Pick<Programacao, 'days'>): Programacao {
+function loader(props: Pick<Programacao, "days">): Programacao {
   return props;
 }
 

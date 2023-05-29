@@ -11,7 +11,8 @@ function Card({
   label = "Chico César",
   caption = "Quinta, 01 de junho - 10pm",
   location = "Palco Principal do Parque do Povo",
-  imageUrl = "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/925/2acbb06b-5e86-4588-ac8b-a76d282b60c7",
+  imageUrl =
+    "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/925/2acbb06b-5e86-4588-ac8b-a76d282b60c7",
 }: Props) {
   return (
     <div

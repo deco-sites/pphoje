@@ -66,7 +66,7 @@ const Modal = ({
   }, [open]);
 
   return (
-    <dialog   
+    <dialog
       {...props}
       ref={ref}
       class={`bg-white max-w-full w-[90%] h-[70%] overflow-scroll rounded-3xl backdrop-opacity-50 ${

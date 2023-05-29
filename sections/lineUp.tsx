@@ -4,7 +4,7 @@ import BackToTop from "../islands/BackToTop.tsx";
 
 export type SocialMedia = {
   link?: string;
-  icon?: 'twitter' | 'instagram' | 'spotify' | 'site';
+  icon?: "twitter" | "instagram" | "spotify" | "site";
 };
 
 export interface Artist {
