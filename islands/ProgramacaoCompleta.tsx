@@ -1,4 +1,4 @@
-import type { Programacao } from "../configssaojoao/Programacao.ts";
+import type { Programacao } from "../loaders/Programacao.ts";
 import Card from "../components/ui/Card.tsx";
 import { useState } from "preact/hooks";
 
