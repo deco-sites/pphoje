@@ -3810,8 +3810,7 @@
                   },
                   "referenceDate": {
                     "type": "string",
-                    "title": "Reference Date",
-                    "format": "date-time"
+                    "title": "Reference Date"
                   },
                   "attraction": {
                     "type": "array",
@@ -3940,8 +3939,7 @@
               },
               "referenceDate": {
                 "type": "string",
-                "title": "Reference Date",
-                "format": "date-time"
+                "title": "Reference Date"
               },
               "attraction": {
                 "type": "array",
