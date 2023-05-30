@@ -5,6 +5,7 @@ export interface Props {
   imageUrl?: string;
   caption?: string;
   location?: string;
+  
 }
 
 function Card({
@@ -14,10 +15,12 @@ function Card({
   imageUrl =
     "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/925/2acbb06b-5e86-4588-ac8b-a76d282b60c7",
 }: Props) {
+
+
   return (
     <div
-      class="p-2 mt-4 flex gap-2 rounded-md"
-      style="box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1), 0px -3px 5px rgba(0, 0, 0, 0.1)"
+      class={`w-[410px] mx-auto p-2 mt-4 flex gap-2 cursor-pointer hover:bg-gray-50 transition duration-300 ease-in-out text-gray-800 font-bold py-2 px-4 border border-blue-600 rounded-md marker:shadow`}
+      style="box-shadow: 0px 3px 5px rgba(156, 151, 151, 0.1), 0px -3px 5px rgba(141, 136, 136, 0.1)"
     >
       <div class="pl-2 pt-2">
         <img
@@ -29,7 +32,8 @@ function Card({
         />
       </div>
       <div class="flex flex-col pl-2">
-        <span class="text-card-date font-bold  text-md">{caption}</span>
+        {/* colocar caption nesse primeiro */}
+        <span class="text-card-date font-bold text-md">Quinta, 01 de junho - 10pm</span>
         <span class="text-card-name font-bold">{label}</span>
         <div class="flex items-center gap-0.5 font-bold">
           <span>

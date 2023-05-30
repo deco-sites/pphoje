@@ -7734,7 +7734,7 @@
       "required": [],
       "title": "OptionalColors"
     },
-    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors&dace44408f346bf0937ce15ad85150d1": {
+    "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@9261f1c9bd901c824cb8756cacfc1f04&Colors": {
       "allOf": [
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors"
@@ -7750,7 +7750,7 @@
           "required": []
         }
       ],
-      "title": "Colors&dace44408f346bf0937ce15ad85150d1"
+      "title": "9261f1c9bd901c824cb8756cacfc1f04&Colors"
     },
     "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Miscellaneous": {
       "type": "object",
@@ -7853,7 +7853,7 @@
       "type": "object",
       "properties": {
         "colors": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@Colors&dace44408f346bf0937ce15ad85150d1",
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvRGVzaWduU3lzdGVtLnRzeA==@9261f1c9bd901c824cb8756cacfc1f04&Colors",
           "title": "Colors"
         },
         "miscellaneous": {
@@ -8019,19 +8019,36 @@
       "required": [],
       "title": "deco-sites/pphoje/sections/Home.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9wcGhvamUvbG9hZGVycy9Qcm9ncmFtYWNhby50cw==@Programacao[]": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvbG9hZGVycy9Qcm9ncmFtYWNhby50cw==@Programacao"
-      },
-      "title": "Programacao[]"
-    },
     "ZGVjby1zaXRlcy9wcGhvamUvc2VjdGlvbnMvSW50cm8udHN4@Props": {
       "type": "object",
       "properties": {
-        "prog": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9wcGhvamUvbG9hZGVycy9Qcm9ncmFtYWNhby50cw==@Programacao[]",
-          "title": "Prog"
+        "label": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Label"
+        },
+        "imageUrl": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Image Url"
+        },
+        "caption": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Caption"
+        },
+        "location": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Location"
         }
       },
       "required": [],
