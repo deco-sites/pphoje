@@ -8,7 +8,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        "card-date": "#EB8A90",
+        "card-date": "#5669FF",
         "card-name": "#120D26",
         "card-local": "#747688",
         "btn-label": "#6B21A8",

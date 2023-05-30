@@ -26,40 +26,7 @@ function formatarData(data: string) {
 }
 
 function ProgramacaoCompleta({ programacao }: Props) {
-  const [hoveredIndex, setHoveredIndex] = useState(-1);
-  const [selectedPerformer, setSelectedPerformer] = useState<any | undefined>(
-    undefined,
-  );
-  const [dialogShow, setDialogShow] = useState(false);
-  const [busca, setBusca] = useState("");
-
-  function openDialog(index: number) {
-    const modal = document.querySelector("[data-modal-2]") as HTMLDialogElement;
-    document.body.style.overflowY = "hidden";
-    const buscado = programacao && programacao.days[0];
-    setSelectedPerformer(buscado);
-    setDialogShow(true);
-    modal.showModal();
-  }
-  function closeDialog() {
-    const modal = document.querySelector("[data-modal-2]") as HTMLDialogElement;
-    setDialogShow(false);
-    document.body.style.overflowY = "auto";
-    modal.close();
-  }
-  function handleMouseOver(index: number) {
-    setHoveredIndex(index);
-  }
-
-  function handleMouseOut() {
-    setHoveredIndex(-1);
-  }
-  function handleChange(e: Event) {
-    const inputElement = e.target as HTMLInputElement;
-    setBusca(inputElement.value);
-  }
-
-  return (
+   return (
     <div className="flex flex-col items-center">
       <span class="text-xl font-bold mt-4" id="search">
         Programação Completa
